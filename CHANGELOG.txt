@@ -1,0 +1,7 @@
+* x.x.x
+-
+
+* 0.0.0
+- Initial scheme
+- Add project Django DataRadar
+- Add Django application radar
