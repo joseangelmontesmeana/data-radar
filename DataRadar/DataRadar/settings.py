@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,12 +26,11 @@ SECRET_KEY = '4&(xan&8!(gdy*0i1-%8@*6%3g803(5a0c7w5ygdb#&va4q$z$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
-
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+# Add here your project apps
+PROJECT_APPS = ["radar.apps.RadarConfig", ]
+
+# Add here other third part apps needed
+EXTERNAL_APPS = []
+
+
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + EXTERNAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -74,9 +83,14 @@ WSGI_APPLICATION = 'DataRadar.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": config("MYSQL_DATABASE", default="example_database"),
+        "USER": config("MYSQL_USER", default="example_user"),
+        "PASSWORD": config("MYSQL_PASSWORD", default="example_password"),
+        "HOST": config("DB_HOST", default="db"),
+        "PORT": config("DB_PORT", default=3306, cast=int),
+        "OPTIONS": {"local_infile": 1},
     }
 }
 
@@ -118,3 +132,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/static/'

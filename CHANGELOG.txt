@@ -1,6 +1,11 @@
 * x.x.x
 -
 
+* 0.0.1
+- Add docker-compose for development environment
+- Add Makefile for development environment
+- Add docker
+
 * 0.0.0
 - Initial scheme
 - Add project Django DataRadar
