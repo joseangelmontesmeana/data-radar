@@ -20,11 +20,15 @@ RUN apt-get update && \
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
+COPY wait-for-it.sh /scripts/wait-for-it.sh
+
 # Adds our application code to the image
 COPY ./DataRadar/ /code/
 
 WORKDIR /code
 
 EXPOSE 8000
+
+RUN python manage.py collectstatic
 
 ENTRYPOINT ["gunicorn",  "--bind", "0.0.0.0:8000", "DataRadar.wsgi"]
