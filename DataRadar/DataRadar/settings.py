@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4&(xan&8!(gdy*0i1-%8@*6%3g803(5a0c7w5ygdb#&va4q$z$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'DataRadar.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": config("MYSQL_DATABASE", default="example_database"),
-        "USER": config("MYSQL_USER", default="example_user"),
-        "PASSWORD": config("MYSQL_PASSWORD", default="example_password"),
+        "NAME": config("DB_NAME", default="example_database"),
+        "USER": config("DB_USER", default="example_user"),
+        "PASSWORD": config("DB_PASSWORD", default="example_password"),
         "HOST": config("DB_HOST", default="db"),
         "PORT": config("DB_PORT", default=3306, cast=int),
         "OPTIONS": {"local_infile": 1},
