@@ -91,7 +91,7 @@ make clean
 git pull git@github.com:joseangelmontesmeana/data-radar.git 
 
 # Ejecutar:
-docker-compose up -d
+docker-compose up -d --build
 
 # El servicio quedara expuesto en el puerto 8000 de nuestra máquina, y la base de datos en el 3306.
 

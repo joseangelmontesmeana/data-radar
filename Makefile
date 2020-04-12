@@ -26,7 +26,7 @@ clean:
 
 .PHONY: up
 up:
-	$(DOCKER_COMPOSE) up -d
+	$(DOCKER_COMPOSE) up -d --build
 
 .PHONY: down
 down:
