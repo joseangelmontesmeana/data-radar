@@ -14,7 +14,7 @@ class Pharmacy(models.Model):
     # location = models.PointField()
 
     # def save(self, *args, **kwargs):
-    #     self.latitude = self.loacation.y
+    #     self.latitude = self.location.y
     #     self.longitude = self.location.x
     #     super(Pharmacy, self).save(*args, **kwargs)
 
