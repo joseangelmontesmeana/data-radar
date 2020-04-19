@@ -8,8 +8,8 @@ class Pharmacy(models.Model):
     """
     name = models.CharField(max_length=30)
     phone = models.PositiveIntegerField(validators=[MinValueValidator(984000000), MaxValueValidator(985999999)])
-    latitude = models.DecimalField(max_digits=10, decimal_places=6)
-    longitude = models.DecimalField(max_digits=10, decimal_places=6)
+    latitude = models.DecimalField(max_digits=12, decimal_places=7)
+    longitude = models.DecimalField(max_digits=12, decimal_places=7)
 
     # location = models.PointField()
 
