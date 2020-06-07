@@ -1,0 +1,7 @@
+{
+  "Pharmacy": "http://datos.gijon.es/doc/salud/farmacias.json",
+  "HealthCenters": "http://datos.gijon.es/doc/salud/centros-sanitarios.json",
+  "SwimmingPool": "http://datos.gijon.es/doc/deporte/piscinas.json",
+  "SoccerField": "http://datos.gijon.es/doc/deporte/campos-futbol.json",
+  "other": "http://wwww.google.es"
+}

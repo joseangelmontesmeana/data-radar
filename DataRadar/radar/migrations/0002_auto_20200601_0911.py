@@ -7,18 +7,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('radar', '0001_initial'),
+        ("radar", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='pharmacy',
-            name='name',
-            field=models.CharField(max_length=150),
+            model_name="pharmacy", name="name", field=models.CharField(max_length=150),
         ),
         migrations.AlterField(
-            model_name='pharmacy',
-            name='phone',
-            field=models.CharField(max_length=9, validators=[django.core.validators.RegexValidator('^98(\\d){7}$', message='Use formato: 98XXXXXXX')]),
+            model_name="pharmacy",
+            name="phone",
+            field=models.CharField(
+                max_length=9,
+                validators=[
+                    django.core.validators.RegexValidator(
+                        "^98(\\d){7}$", message="Use formato: 98XXXXXXX"
+                    )
+                ],
+            ),
         ),
     ]

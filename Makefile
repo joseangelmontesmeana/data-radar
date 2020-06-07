@@ -31,3 +31,9 @@ up:
 .PHONY: down
 down:
 	$(DOCKER_COMPOSE) down
+
+.PHONY: format
+format:
+	isort -rc --atomic .
+	black .
+	flake8 .
