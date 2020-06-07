@@ -15,6 +15,8 @@ logger = logging.getLogger(__name__)
 class Command(BaseCommand):
     help = "Comando load_data, permite cargar los datos desde las urls configuradas."
 
+    tables = {"Pharmacy": Pharmacy}
+
     def handle(self, *args, **options):
         default_phone = ""
         default_latitude = 0
@@ -86,11 +88,16 @@ class Command(BaseCommand):
                     longitude = default_longitude
                     logger.warning("Latitud o longitud no encontrados")
 
-                logger.debug(f"{name} ||| {phone} ||| {latitude} {longitude}")
-
                 # INSERT VALUE IN DATABASE INFRASTRUCTURE TABLE
-                tables = {"Pharmacy": Pharmacy}
+                logger.debug(
+                    f"Insert in {infrastructure}: name={name}, phone={phone}, latitude={latitude}, "
+                    f"longitude={longitude}"
+                )
 
-                # tables.get(infrastructure).insert()
-
-        logger.debug(urls)
+                try:
+                    it = self.tables.get(infrastructure)(
+                        name=name, phone=phone, latitude=latitude, longitude=longitude
+                    )
+                    it.save()
+                except TypeError:
+                    logger.warning(f"{infrastructure} no es una tabla válida")
