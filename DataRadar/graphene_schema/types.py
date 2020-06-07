@@ -33,14 +33,19 @@ class Query(object):
         longitude = kwargs.get('longitude')
         radio = kwargs.get('radio')
 
+        # Validate coordinates  "coords1" and "coords2"
+
         coords1 = (latitude, longitude)
         list_pharmacies = []
         pharmacies = Pharmacy.objects.all()
 
         for pharmacy in pharmacies:
             coords2 = (pharmacy.latitude, pharmacy.longitude)
-            if abs(geopy.distance.vincenty(coords1, coords2).m) <= radio:
-                list_pharmacies.append(pharmacy)
+            try:
+                if abs(geopy.distance.geodesic(coords1, coords2).m) <= radio:
+                    list_pharmacies.append(pharmacy)
+            except ValueError:
+                pass
 
         return list_pharmacies
 
