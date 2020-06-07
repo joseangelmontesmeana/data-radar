@@ -40,13 +40,22 @@ DJANGO_APPS = [
 ]
 
 # Add here your project apps
-PROJECT_APPS = ["radar.apps.RadarConfig", ]
+PROJECT_APPS = [
+    "graphene_django",
+    "radar.apps.RadarConfig",
+    "graphene_schema",
+]
 
 # Add here other third part apps needed
 EXTERNAL_APPS = []
 
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + EXTERNAL_APPS
+
+# Graphene setup
+GRAPHENE = {
+    'SCHEMA': 'graphene_schema.schema.schema'
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
