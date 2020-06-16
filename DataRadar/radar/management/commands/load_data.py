@@ -5,9 +5,19 @@ import urllib
 
 from django.core.management.base import BaseCommand
 
-from radar.exceptions import InvalidLatitude, InvalidLongitude, InvalidPhone
-from radar.models import Pharmacy
-from radar.validators import validate_latitude, validate_longitude, validate_phone
+from radar.exceptions import (
+    InvalidLatitude,
+    InvalidLocation,
+    InvalidLongitude,
+    InvalidPhone,
+)
+from radar.models import Monument, Museum
+from radar.validators import (
+    validate_latitude,
+    validate_location,
+    validate_longitude,
+    validate_phone,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -15,7 +25,7 @@ logger = logging.getLogger(__name__)
 class Command(BaseCommand):
     help = "Comando load_data, permite cargar los datos desde las urls configuradas."
 
-    tables = {"Pharmacy": Pharmacy}
+    tables = {"Monuments": Monument, "Museums": Museum}
 
     def handle(self, *args, **options):
         default_phone = ""
@@ -50,48 +60,43 @@ class Command(BaseCommand):
                 logger.warning(f"{url} no tiene un formato JSON correcto")
                 data = {}
 
-            i = 0
-            for item in data.get("directorios", {}).get("directorio", {}):
-
-                name = item["nombre"]["content"]
-
+            for item in data:
+                name = item.get("titulo")
                 try:
-                    phone = validate_phone(item["telefono"]["content"])
+                    phone = validate_phone(item.get("telefono"))
+
                 except InvalidPhone:
                     phone = default_phone
-                    logger.warning("Error de formato de teléfono")
-
-                except KeyError:
-                    phone = default_phone
-                    logger.warning("Teléfono no encontrado")
+                    logger.warning("Teléfono no disponible")
 
                 try:
+                    location = validate_location(item.get("localizacion"))
                     latitude = validate_latitude(
-                        item["localizacion"]["content"].split(" ")[0]
+                        location.split(",")[1].split("Lat:")[1]
                     )
                     longitude = validate_longitude(
-                        item["localizacion"]["content"].split(" ")[1]
+                        location.split(",")[0].split("Lon:")[1]
                     )
+
+                except InvalidLocation:
+                    latitude = default_latitude
+                    longitude = default_longitude
+                    logger.warning("Localización no disponible")
 
                 except InvalidLatitude:
                     latitude = default_latitude
                     longitude = default_longitude
-                    logger.warning("Valor de latitud erroneo")
+                    logger.warning("Latitud no disponible")
 
-                except InvalidLongitude:
+                except InvalidLocation:
                     latitude = default_latitude
                     longitude = default_longitude
-                    logger.warning("Valor de longitud erroneo")
-
-                except KeyError:
-                    latitude = default_latitude
-                    longitude = default_longitude
-                    logger.warning("Latitud o longitud no encontrados")
+                    logger.warning("Longitud no disponible")
 
                 # INSERT VALUE IN DATABASE INFRASTRUCTURE TABLE
                 logger.debug(
-                    f"Insert in {infrastructure}: name={name}, phone={phone}, latitude={latitude}, "
-                    f"longitude={longitude}"
+                    f"Añadir en {infrastructure}: nombre={name}, teléfono={phone}, latitud={latitude}, "
+                    f"longitud={longitude}"
                 )
 
                 try:
@@ -99,5 +104,6 @@ class Command(BaseCommand):
                         name=name, phone=phone, latitude=latitude, longitude=longitude
                     )
                     it.save()
+                    pass
                 except TypeError:
                     logger.warning(f"{infrastructure} no es una tabla válida")

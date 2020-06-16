@@ -1,15 +1,22 @@
 import re
 from decimal import Decimal
 
-from radar.exceptions import InvalidLatitude, InvalidLongitude, InvalidPhone
+from radar.exceptions import (
+    InvalidLatitude,
+    InvalidLocation,
+    InvalidLongitude,
+    InvalidPhone,
+)
 
 
-def validate_phone(phone):  # Valid and format field telephone
-    p = re.compile("98\\d \\d\\d\\d \\d\\d\\d")
-    fix_phone = next(iter(p.findall(phone)), "").replace(" ", "")
+def validate_phone(phone):
+    phone = phone.replace("+34", "")
+    phone = phone.replace(" ", "")
+    p = re.compile("98\\d\\d\\d\\d\\d\\d\\d")
+    fix_phone = next(iter(p.findall(phone)), "")
 
-    p = re.compile("6\\d\\d \\d\\d \\d\\d \\d\\d")
-    mobile_phone = next(iter(p.findall(phone)), "").replace(" ", "")
+    p = re.compile("6\\d\\d\\d\\d\\d\\d\\d\\d")
+    mobile_phone = next(iter(p.findall(phone)), "")
 
     if fix_phone == "" and mobile_phone == "":
         raise InvalidPhone
@@ -19,6 +26,17 @@ def validate_phone(phone):  # Valid and format field telephone
 
     else:
         return fix_phone
+
+
+def validate_location(location):
+    location = location.replace(" ", "")
+    p = re.compile("Lon:.*,Lat:.*")
+    location = next(iter(p.findall(location)), "")
+
+    if location == "":
+        raise InvalidLocation
+    else:
+        return location
 
 
 def validate_latitude(latitude):  # Valid and format field latitude
