@@ -1,4 +1,5 @@
 import graphene
+
 from .types import Query as SchemeQuery
 
 
