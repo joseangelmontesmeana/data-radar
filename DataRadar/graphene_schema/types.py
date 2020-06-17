@@ -1,8 +1,13 @@
 import graphene
 from graphene_django.types import DjangoObjectType
 
+from graphene_schema.queries_logic import (
+    get_all_items,
+    get_item,
+    get_list_items,
+    get_nearby_items,
+)
 from radar.models import Monument, Museum
-from graphene_schema.queries_logic import get_item, get_all_items, get_list_items, get_nearby_items
 
 
 class MonumentType(DjangoObjectType):
@@ -18,9 +23,13 @@ class MuseumType(DjangoObjectType):
 class Query(object):
 
     # Monument inquiries
-    get_monument = graphene.Field(MonumentType, id=graphene.Int(), name=graphene.String())
+    get_monument = graphene.Field(
+        MonumentType, id=graphene.Int(), name=graphene.String()
+    )
     get_all_monuments = graphene.List(MonumentType)
-    get_list_monuments = graphene.List(MonumentType, names=graphene.List(graphene.String))
+    get_list_monuments = graphene.List(
+        MonumentType, names=graphene.List(graphene.String)
+    )
     get_nearby_monuments = graphene.List(
         MonumentType,
         latitude=graphene.Float(required=True),
