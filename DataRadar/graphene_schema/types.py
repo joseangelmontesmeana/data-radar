@@ -1,8 +1,8 @@
-import geopy.distance
 import graphene
 from graphene_django.types import DjangoObjectType
 
-from radar.models import Monument
+from radar.models import Monument, Museum
+from graphene_schema.queries_logic import get_item, get_all_items, get_list_items, get_nearby_items
 
 
 class MonumentType(DjangoObjectType):
@@ -10,60 +10,55 @@ class MonumentType(DjangoObjectType):
         model = Monument
 
 
-class Query(object):
-    monument = graphene.Field(MonumentType, id=graphene.Int(), name=graphene.String())
+class MuseumType(DjangoObjectType):
+    class Meta:
+        model = Museum
 
-    nearby_monuments = graphene.List(
+
+class Query(object):
+
+    # Monument inquiries
+    get_monument = graphene.Field(MonumentType, id=graphene.Int(), name=graphene.String())
+    get_all_monuments = graphene.List(MonumentType)
+    get_list_monuments = graphene.List(MonumentType, names=graphene.List(graphene.String))
+    get_nearby_monuments = graphene.List(
         MonumentType,
         latitude=graphene.Float(required=True),
         longitude=graphene.Float(required=True),
         radio=graphene.Int(required=True),
     )
-    list_monuments = graphene.List(
-        MonumentType, list_name=graphene.List(graphene.String)
+
+    def resolve_get_monument(self, info, **kwargs):
+        return get_item(Monument, info, **kwargs)
+
+    def resolve_get_all_monuments(self, info, **kwargs):
+        return get_all_items(Monument)
+
+    def resolve_get_list_monuments(self, info, **kwargs):
+        return get_list_items(Monument, info, **kwargs)
+
+    def resolve_get_nearby_monuments(self, info, **kwargs):
+        return get_nearby_items(Monument, info, **kwargs)
+
+    # Museums inquiries
+    get_museum = graphene.Field(MuseumType, id=graphene.Int(), name=graphene.String())
+    get_all_museums = graphene.List(MuseumType)
+    get_list_museums = graphene.List(MuseumType, names=graphene.List(graphene.String))
+    get_nearby_museums = graphene.List(
+        MuseumType,
+        latitude=graphene.Float(required=True),
+        longitude=graphene.Float(required=True),
+        radio=graphene.Int(required=True),
     )
-    all_monuments = graphene.List(MonumentType)
 
-    def resolve_monumenty(self, info, **kwargs):
-        id = kwargs.get("id")
-        name = kwargs.get("name")
-        if id is not None:
-            return Monument.objects.get(pk=id)
-        if name is not None:
-            return Monument.objects.get(name=name)
-        return None
+    def resolve_get_museum(self, info, **kwargs):
+        return get_item(Museum, info, **kwargs)
 
-    def resolve_nearby_monuments(self, info, **kwargs):
-        latitude = kwargs.get("latitude")
-        longitude = kwargs.get("longitude")
-        radio = kwargs.get("radio")
+    def resolve_get_all_museums(self, info, **kwargs):
+        return get_all_items(Museum)
 
-        # Validate coordinates  "coords1" and "coords2"
+    def resolve_get_list_museums(self, info, **kwargs):
+        return get_list_items(Museum, info, **kwargs)
 
-        coords1 = (latitude, longitude)
-        list_monuments = []
-        monuments = Monument.objects.all()
-
-        for monument in monuments:
-            coords2 = (monument.latitude, monument.longitude)
-            try:
-                if abs(geopy.distance.geodesic(coords1, coords2).m) <= radio:
-                    list_monuments.append(monument)
-            except ValueError:
-                pass
-
-        return list_monuments
-
-    def resolve_list_monuments(self, info, **kwargs):
-        list_name = kwargs.get("list_name")
-        if list_name is not None:
-            monuments = []
-            for name in list_name:
-                monument = Monument.objects.get(name=name)
-                if monument is not None:
-                    monuments.append(monument)
-            return monuments
-        return None
-
-    def resolve_all_monuments(self, info, **kwargs):
-        return Monument.objects.all()
+    def resolve_get_nearby_museums(self, info, **kwargs):
+        return get_nearby_items(Museum, info, **kwargs)
