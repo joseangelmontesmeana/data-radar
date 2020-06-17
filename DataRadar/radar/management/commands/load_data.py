@@ -24,8 +24,12 @@ logger = logging.getLogger(__name__)
 
 class Command(BaseCommand):
     help = "Comando load_data, permite cargar los datos desde las urls configuradas."
-
     tables = {"Monuments": Monument, "Museums": Museum}
+
+    def clean_data(self):
+        for desc, table in self.tables.items():
+            logger.info(f"Borrando elementos de {desc}")
+            table.objects.all().delete()
 
     def handle(self, *args, **options):
         default_phone = ""
@@ -42,7 +46,9 @@ class Command(BaseCommand):
             logger.error("setup/data_urls.json no es un fichero json válido")
             exit(1)
 
-        for infrastructure, url in urls.items():
+        self.clean_data()
+
+        for item_type, url in urls.items():
             try:
                 req = urllib.request.Request(url)
 
@@ -95,15 +101,15 @@ class Command(BaseCommand):
 
                 # INSERT VALUE IN DATABASE INFRASTRUCTURE TABLE
                 logger.debug(
-                    f"Añadir en {infrastructure}: nombre={name}, teléfono={phone}, latitud={latitude}, "
+                    f"Añadir en {item_type}: nombre={name}, teléfono={phone}, latitud={latitude}, "
                     f"longitud={longitude}"
                 )
 
                 try:
-                    it = self.tables.get(infrastructure)(
+                    it = self.tables.get(item_type)(
                         name=name, phone=phone, latitude=latitude, longitude=longitude
                     )
                     it.save()
                     pass
                 except TypeError:
-                    logger.warning(f"{infrastructure} no es una tabla válida")
+                    logger.warning(f"{item_type} no es una tabla válida")
