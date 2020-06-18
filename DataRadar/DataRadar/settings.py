@@ -144,3 +144,5 @@ LOGGING = {
     "handlers": {"console": {"class": "logging.StreamHandler",},},
     "root": {"handlers": ["console"], "level": LOG_LEVEL,},
 }
+
+LOCAL_DATA = config("LOCAL_DATA", default=False, cast=bool)
