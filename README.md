@@ -24,6 +24,11 @@ DB_USER=radar       # (Nombre de usuario en la base de datos)
 DB_PASSWORD=radar   # (Password del usuario en base de datos)
 DB_HOST=10.0.0.1    # (Host de la base de datos)
 DB_PORT=3306        # (Puerto de la base de datos)
+
+## ETL Setup
+## Puedes no proporcionar la variable LOCAL_DATA. En este caso toma valor falso y los datos serán obtenidos del catálogo
+## de datos abiertos
+LOCAL_DATA=True                 # (Usar datos locales o extraerlos directamente de la web del catálogo de datos)
 ```
 
 #### Despliegue en producción
@@ -63,6 +68,11 @@ DB_USER=radar                   # (Nombre de usuario en la base de datos)
 DB_PASSWORD=radar               # (Password del usuario en base de datos)
 DB_HOST=db                      # (Host de la base de datos, si usas compose ha de ser db)
 DB_PORT=3306                    # (Puerto de la base de datos, si usas compose ha de ser 3306)
+
+## ETL Setup
+## Puedes no proporcionar la variable LOCAL_DATA. En este caso toma valor falso y los datos serán obtenidos del catálogo
+## de datos abiertos
+LOCAL_DATA=False                 # (Usar datos locales o extraerlos directamente de la web del catálogo de datos)
 
 ## Django Setup
 DEBUG=True                      # (Activar el modo debug en django)
