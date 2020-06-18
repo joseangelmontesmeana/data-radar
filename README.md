@@ -36,6 +36,12 @@ LOCAL_DATA=True                 # (Usar datos locales o extraerlos directamente 
 Una vez se disponga de docker y una base de datos accesible el despliegue del servicio se realiza lanzando la imagen docker.
 ```
 docker run -d -p 8000:8000 --env-file .env totalspizt/data-radar:VERSION
+
+# Nota: 
+# En caso de activar LOCAL_DATA para permitir la carga de datos desde los ficheros locales, será necesario mapear
+# el volumen /code/data/ a un directorio local en el que se encuentren los datos de los elementos a cargar
+
+docker run -d -p 8000:8000 -v /local/directory/data/:/code/data/ --env-file .env totalspizt/data-radar:VERSION
 ```
 ## Entorno de desarrollo
 
@@ -93,6 +99,10 @@ make up
 
 # Para apagar el servicio, basta con ejecutar la siguiente orden:
 make clean
+
+# Nota: 
+# En caso de activar LOCAL_DATA para permitir la carga de datos desde los ficheros locales.
+# Asegurarse de disponer de dichos ficheros en el directorio DataRadar/data/ del proyecto.
 ```
 
 ###### Usando docker-compose sin make
@@ -107,6 +117,10 @@ docker-compose up -d --build
 
 # Para apagar el servicio, basta con ejecutar la siguiente orden:
 docker-compose down
+
+# Nota: 
+# En caso de activar LOCAL_DATA para permitir la carga de datos desde los ficheros locales.
+# Asegurarse de disponer de dichos ficheros en el directorio DataRadar/data/ del proyecto.
 ```
 
 Además de estas funcionalidades, en el [Makefile](https://github.com/joseangelmontesmeana/data-radar/blob/master/Makefile)
