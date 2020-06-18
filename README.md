@@ -101,8 +101,8 @@ make up
 make clean
 
 # Nota: 
-# En caso de activar LOCAL_DATA para permitir la carga de datos desde los ficheros locales.
-# Asegurarse de disponer de dichos ficheros en el directorio DataRadar/data/ del proyecto.
+# En caso de activar LOCAL_DATA para permitir la carga de datos desde los ficheros locales,
+# asegurarse de disponer de dichos ficheros en el directorio DataRadar/data/ del proyecto.
 ```
 
 ###### Usando docker-compose sin make
@@ -119,8 +119,8 @@ docker-compose up -d --build
 docker-compose down
 
 # Nota: 
-# En caso de activar LOCAL_DATA para permitir la carga de datos desde los ficheros locales.
-# Asegurarse de disponer de dichos ficheros en el directorio DataRadar/data/ del proyecto.
+# En caso de activar LOCAL_DATA para permitir la carga de datos desde los ficheros locales,
+# asegurarse de disponer de dichos ficheros en el directorio DataRadar/data/ del proyecto.
 ```
 
 Además de estas funcionalidades, en el [Makefile](https://github.com/joseangelmontesmeana/data-radar/blob/master/Makefile)
