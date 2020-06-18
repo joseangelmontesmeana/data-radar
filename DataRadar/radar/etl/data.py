@@ -108,10 +108,10 @@ class Data:
                     data = json.load(json_file)
             except OSError:
                 logger.error(f"No existe el fichero {DATA_DIRECTORY}{f}")
-                exit(1)
+                continue
             except ValueError:
                 logger.error(f"{DATA_DIRECTORY}{f} no es un fichero json válido")
-                exit(1)
+                continue
 
             self.__load_data_in_item_type(data, item_type)
 
