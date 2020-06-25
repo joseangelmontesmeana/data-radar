@@ -78,7 +78,7 @@ DB_PORT=3306                    # (Puerto de la base de datos, si usas compose h
 ## ETL Setup
 ## Puedes no proporcionar la variable LOCAL_DATA. En este caso toma valor falso y los datos serán obtenidos del catálogo
 ## de datos abiertos
-LOCAL_DATA=False                 # (Usar datos locales o extraerlos directamente de la web del catálogo de datos)
+LOCAL_DATA=False                # (Usar datos locales o extraerlos directamente de la web del catálogo de datos)
 
 ## Django Setup
 DEBUG=True                      # (Activar el modo debug en django)
