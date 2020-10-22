@@ -54,7 +54,7 @@ siguientes herramientas:
 - [docker-compose](https://docs.docker.com/compose/)
 - [make](https://pypi.org/project/make/)
 
-Una vez instalados estos requesitos, no será nisiquiera necesario montar una base de datos MariaDB, ya que la misma
+Una vez instalados estos requisitos, no será nisiquiera necesario montar una base de datos MariaDB, ya que la misma
 podrá ser levantada utilizando docker.
 
 No obstante, al igual que en el entorno de producción, resulta necesario disponer de un fichero [.env](https://github.com/joseangelmontesmeana/data-radar/blob/master/.example.development.env)
@@ -86,7 +86,7 @@ DEBUG=True                      # (Activar el modo debug en django)
 
 #### Despliegue en desarrollo
 
-Una vez cumplidos todos los requesitos, disponemos de dos formas de despliegue, usando make o directamente docker-compose.
+Una vez cumplidos todos los requisitos, disponemos de dos formas de despliegue, usando make o directamente docker-compose.
 ###### Usando make
 ```
 # Descargar el repo:
