@@ -32,6 +32,15 @@ up:
 down:
 	$(DOCKER_COMPOSE) down
 
+.PHONY: test
+test: up
+	$(DOCKER_COMPOSE) exec api python manage.py test
+	$(DOCKER_COMPOSE) down
+
+.PHONY: import_data
+import_data:
+	$(DOCKER_COMPOSE) exec api python manage.py load_data
+
 .PHONY: format
 format:
 	isort -rc --atomic .
