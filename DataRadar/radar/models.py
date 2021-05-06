@@ -19,6 +19,22 @@ class BaseModel(models.Model):
         return f"{self.name}|{self.phone}|{self.latitude} {self.longitude}"
 
 
+class HighSchool(BaseModel):
+    """
+    Model HighSchool,
+    """
+
+    pass
+
+
+class Library(BaseModel):
+    """
+    Model Library,
+    """
+
+    pass
+
+
 class Monument(BaseModel):
     """
     Model Monument,
@@ -30,6 +46,30 @@ class Monument(BaseModel):
 class Museum(BaseModel):
     """
     Model Museum,
+    """
+
+    pass
+
+
+class NurserySchool(BaseModel):
+    """
+    Model NurserySchool,
+    """
+
+    pass
+
+
+class School(BaseModel):
+    """
+    Model School,
+    """
+
+    pass
+
+
+class SecurityForce(BaseModel):
+    """
+    Model SecurityForce,
     """
 
     pass

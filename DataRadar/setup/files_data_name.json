@@ -1,4 +1,9 @@
 {
+    "HighSchools": "high_schools.json",
+    "Libraries": "libraries.json",
     "Museums": "museums.json",
-    "Monuments": "monuments.json"
+    "Monuments": "monuments.json",
+    "NurserySchools": "nursery_schools.json",
+    "Schools": "schools.json",
+    "SecurityForces": "security_forces.json"
 }

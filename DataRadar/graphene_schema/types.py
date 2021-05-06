@@ -7,7 +7,17 @@ from graphene_schema.queries_logic import (
     get_list_items,
     get_nearby_items,
 )
-from radar.models import Monument, Museum
+from radar.models import HighSchool, Library, Monument, Museum, NurserySchool, School, SecurityForce
+
+
+class HighSchoolType(DjangoObjectType):
+    class Meta:
+        model = HighSchool
+
+
+class LibraryType(DjangoObjectType):
+    class Meta:
+        model = Library
 
 
 class MonumentType(DjangoObjectType):
@@ -20,7 +30,75 @@ class MuseumType(DjangoObjectType):
         model = Museum
 
 
+class NurserySchoolType(DjangoObjectType):
+    class Meta:
+        model = NurserySchool
+
+
+class School(DjangoObjectType):
+    class Meta:
+        model = School
+
+
+class SecurityForce(DjangoObjectType):
+    class Meta:
+        model = SecurityForce
+
+
 class Query(object):
+    # HighSchool inquiries
+    get_high_school = graphene.Field(
+        HighSchoolType, id=graphene.Int(), name=graphene.String()
+    )
+    get_all_high_schools = graphene.List(HighSchoolType)
+    get_list_high_schools = graphene.List(
+        HighSchoolType, names=graphene.List(graphene.String)
+    )
+    get_nearby_high_schools = graphene.List(
+        HighSchoolType,
+        latitude=graphene.Float(required=True),
+        longitude=graphene.Float(required=True),
+        radio=graphene.Int(required=True),
+    )
+
+    def resolve_get_high_school(self, info, **kwargs):
+        return get_item(HighSchool, info, **kwargs)
+
+    def resolve_get_all_high_schools(self, info, **kwargs):
+        return get_all_items(HighSchool)
+
+    def resolve_get_list_high_schools(self, info, **kwargs):
+        return get_list_items(HighSchool, info, **kwargs)
+
+    def resolve_get_nearby_high_schools(self, info, **kwargs):
+        return get_nearby_items(HighSchool, info, **kwargs)
+
+    # Library inquiries
+    get_high_library = graphene.Field(
+        LibraryType, id=graphene.Int(), name=graphene.String()
+    )
+    get_all_libraries = graphene.List(LibraryType)
+    get_list_high_schools = graphene.List(
+        LibraryType, names=graphene.List(graphene.String)
+    )
+    get_nearby_libraries = graphene.List(
+        LibraryType,
+        latitude=graphene.Float(required=True),
+        longitude=graphene.Float(required=True),
+        radio=graphene.Int(required=True),
+    )
+
+    def resolve_get_library(self, info, **kwargs):
+        return get_item(Library, info, **kwargs)
+
+    def resolve_get_all_libraries(self, info, **kwargs):
+        return get_all_items(Library)
+
+    def resolve_get_list_libraries(self, info, **kwargs):
+        return get_list_items(Library, info, **kwargs)
+
+    def resolve_get_nearby_libraries(self, info, **kwargs):
+        return get_nearby_items(Library, info, **kwargs)
 
     # Monument inquiries
     get_monument = graphene.Field(
