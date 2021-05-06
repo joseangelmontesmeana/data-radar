@@ -1,4 +1,9 @@
 {
+    "HighSchools": "https://opendata.gijon.es/descargar.php?id=806&tipo=JSON",
+    "Libraries": "https://opendata.gijon.es/descargar.php?id=739&tipo=JSON",
     "Museums": "http://opendata.gijon.es/descargar.php?id=790&tipo=JSON",
-    "Monuments": "http://opendata.gijon.es/descargar.php?id=743&tipo=JSON"
+    "Monuments": "http://opendata.gijon.es/descargar.php?id=743&tipo=JSON",
+    "NurserySchools": "https://opendata.gijon.es/descargar.php?id=753&tipo=JSON",
+    "Schools": "https://opendata.gijon.es/descargar.php?id=754&tipo=JSON",
+    "SecurityForces": "https://opendata.gijon.es/descargar.php?id=755&tipo=JSON"
 }

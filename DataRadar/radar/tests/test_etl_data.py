@@ -1,13 +1,13 @@
 from django.test import TestCase
 
+# from radar.constants import (
+#     DATA_DIRECTORY,
+#     DATA_FILE_NAMES,
+#     SETUP_DIRECTORY,
+#     TABLES,
+#     URLS_FILE,
+# )
 from radar.etl.data import Data
-from radar.constants import (
-    DATA_DIRECTORY,
-    DATA_FILE_NAMES,
-    SETUP_DIRECTORY,
-    TABLES,
-    URLS_FILE,
-)
 
 
 class DataTestCase(TestCase):

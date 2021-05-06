@@ -13,3 +13,4 @@ exclude =
     **/prod.py
     **/default.py
     env/
+    env2/

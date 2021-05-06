@@ -116,7 +116,7 @@ class Data:
             self.__load_data_in_item_type(data, item_type)
 
     def load_data_www(self):
-        logger.info("Realizando carga desde desde el catálogo de datos abiertos (www)")
+        logger.info("Realizando carga desde el catálogo de datos abiertos (www)")
         try:
             with open(f"{SETUP_DIRECTORY}{URLS_FILE}") as json_file:
                 urls = json.load(json_file)
