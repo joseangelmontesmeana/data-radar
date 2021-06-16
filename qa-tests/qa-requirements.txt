@@ -1,0 +1,2 @@
+# Requirements QA
+behave==1.2.6

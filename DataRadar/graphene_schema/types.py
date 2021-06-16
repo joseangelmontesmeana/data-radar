@@ -35,12 +35,12 @@ class NurserySchoolType(DjangoObjectType):
         model = NurserySchool
 
 
-class School(DjangoObjectType):
+class SchoolType(DjangoObjectType):
     class Meta:
         model = School
 
 
-class SecurityForce(DjangoObjectType):
+class SecurityForceType(DjangoObjectType):
     class Meta:
         model = SecurityForce
 
@@ -149,3 +149,72 @@ class Query(object):
 
     def resolve_get_nearby_museums(self, info, **kwargs):
         return get_nearby_items(Museum, info, **kwargs)
+
+    # Nursery schools inquiries
+    get_nursery_school = graphene.Field(NurserySchoolType, id=graphene.Int(), name=graphene.String())
+    get_all_nursery_schools = graphene.List(NurserySchoolType)
+    get_list_nursery_schools = graphene.List(NurserySchoolType, names=graphene.List(graphene.String))
+    get_nearby_nursery_schools = graphene.List(
+        NurserySchoolType,
+        latitude=graphene.Float(required=True),
+        longitude=graphene.Float(required=True),
+        radio=graphene.Int(required=True),
+    )
+
+    def resolve_get_nursery_school(self, info, **kwargs):
+        return get_item(NurserySchool, info, **kwargs)
+
+    def resolve_get_all_nursery_schools(self, info, **kwargs):
+        return get_all_items(NurserySchool)
+
+    def resolve_get_list_nursery_schools(self, info, **kwargs):
+        return get_list_items(NurserySchool, info, **kwargs)
+
+    def resolve_get_nearby_nursery_schools(self, info, **kwargs):
+        return get_nearby_items(NurserySchool, info, **kwargs)
+
+    # Schools inquiries
+    get_school = graphene.Field(SchoolType, id=graphene.Int(), name=graphene.String())
+    get_all_schools = graphene.List(SchoolType)
+    get_list_schools = graphene.List(SchoolType, names=graphene.List(graphene.String))
+    get_nearby_schools = graphene.List(
+        SchoolType,
+        latitude=graphene.Float(required=True),
+        longitude=graphene.Float(required=True),
+        radio=graphene.Int(required=True),
+    )
+
+    def resolve_get_school(self, info, **kwargs):
+        return get_item(School, info, **kwargs)
+
+    def resolve_get_all_schools(self, info, **kwargs):
+        return get_all_items(School)
+
+    def resolve_get_list_schools(self, info, **kwargs):
+        return get_list_items(School, info, **kwargs)
+
+    def resolve_get_nearby_schools(self, info, **kwargs):
+        return get_nearby_items(School, info, **kwargs)
+
+    # Security forces inquiries
+    get_security_forces = graphene.Field(SecurityForceType, id=graphene.Int(), name=graphene.String())
+    get_all_security_forces = graphene.List(SecurityForceType)
+    get_list_security_forces = graphene.List(SecurityForceType, names=graphene.List(graphene.String))
+    get_nearby_security_forces = graphene.List(
+        SecurityForceType,
+        latitude=graphene.Float(required=True),
+        longitude=graphene.Float(required=True),
+        radio=graphene.Int(required=True),
+    )
+
+    def resolve_get_security_forces(self, info, **kwargs):
+        return get_item(SecurityForce, info, **kwargs)
+
+    def resolve_get_all_security_forces(self, info, **kwargs):
+        return get_all_items(SecurityForce)
+
+    def resolve_get_list_security_forces(self, info, **kwargs):
+        return get_list_items(SecurityForce, info, **kwargs)
+
+    def resolve_get_nearby_security_forces(self, info, **kwargs):
+        return get_nearby_items(SecurityForce, info, **kwargs)
