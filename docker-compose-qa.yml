@@ -1,0 +1,40 @@
+version: '3.4'
+
+services:
+  db:
+    restart: always
+    image: mariadb:10.4.0
+    container_name: db
+    environment:
+      - MYSQL_ROOT_PASSWORD=password_for_root
+      - MYSQL_DATABASE=radar_db
+      - MYSQL_USER=radar
+      - MYSQL_PASSWORD=radar
+
+  api:
+    build: .
+    depends_on:
+      - db
+    environment:
+      - DB_NAME=radar_db
+      - DB_USER=radar
+      - DB_PASSWORD=radar
+      - DB_HOST=db
+      - DB_PORT=3306
+    entrypoint: ["/scripts/wait-for-it.sh", "db:3306", "-t", "0", "--", "bash", "-c", "python manage.py migrate && gunicorn --bind 0.0.0.0:8000 DataRadar.wsgi"]
+
+
+  qa:
+    build:
+      context: .
+      dockerfile: Dockerfile-qa
+    depends_on:
+      - api
+    environment:
+      - DB_NAME=radar_db
+      - DB_USER=radar
+      - DB_PASSWORD=radar
+      - DB_HOST=db
+      - DB_PORT=3306
+      - API_URL=http://api:8000/graphql/
+    entrypoint: ["/scripts/wait-for-it.sh", "api:8000", "-t", "0", "--", "bash", "-c", "behave"]
