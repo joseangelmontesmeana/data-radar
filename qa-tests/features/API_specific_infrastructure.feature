@@ -5,7 +5,7 @@ Feature: [data-radar] API queries (To a specific infrastructure) - use_cases (3.
   I want to check all queries (To a specific infrastructure) for this API
 
 
-  @id_test @<use_case_ref> @specific_infrastructure @specific_<infrastructure> @specific_<infrastructure>_all_information
+  @<id_test> @<use_case_ref> @specific_infrastructure @specific_<infrastructure> @specific_<infrastructure>_all_information
   Scenario Outline: <id_test>: I check the query to "get all information from a specific <infrastructure>" - use_case_ref: <use_case_ref>
     When I get the "<infrastructure>" with name "<name>"
     Then I check that the data response is "<info>"
@@ -21,7 +21,7 @@ Feature: [data-radar] API queries (To a specific infrastructure) - use_cases (3.
       | DR-7    | 3.25         | security_forces | Bomberos test_qa_001         | {"name": "Bomberos test_qa_001", "latitude": 43.515687, "longitude": -5.679437, "phone": "985000071", "id": "1"}         |
 
 
-  @id_test @<use_case_ref> @specific_infrastructure @specific_<infrastructure> @specific_<infrastructure>_does_not_exist
+  @<id_test> @<use_case_ref> @specific_infrastructure @specific_<infrastructure> @specific_<infrastructure>_does_not_exist
   Scenario Outline: <id_test>: I check the query to "get the information of a specific <infrastructure> that does not exist" - use_case_ref: <use_case_ref>
     When I get the "<infrastructure>" with name "<name>"
     Then I check that the response body contains error with message "<error_message>"
@@ -38,7 +38,7 @@ Feature: [data-radar] API queries (To a specific infrastructure) - use_cases (3.
       | DR-14   | 3.25         | security_forces | Bomberos test_not_exist         | SecurityForce matching query does not exist. | null |
 
 
-  @id_test @<use_case_ref> @specific_infrastructure @specific_<infrastructure> @specific_<infrastructure>_one_field
+  @<id_test> @<use_case_ref> @specific_infrastructure @specific_<infrastructure> @specific_<infrastructure>_one_field
   Scenario Outline: <id_test>: I check the query to "get the field (<field>) from a specific <infrastructure>" - use_case_ref: <use_case_ref>
     When I get the field "<field>" from a "<infrastructure>" with name "<name>"
     Then I check that the data response is "<info>"
@@ -82,7 +82,7 @@ Feature: [data-radar] API queries (To a specific infrastructure) - use_cases (3.
      | DR-49   | 3.25         | security_forces | Bomberos test_qa_001         | id        | {"id": "1"}                              |
 
 
-  @id_test @<use_case_ref> @specific_infrastructure @specific_<infrastructure> @specific_<infrastructure>_several_fields
+  @<id_test> @<use_case_ref> @specific_infrastructure @specific_<infrastructure> @specific_<infrastructure>_several_fields
   Scenario Outline: <id_test>: I check the query to "get the fields (<fields>) from a specific <infrastructure> - use_case_ref: <use_case_ref>
     When I get the fields "<fields>" from a "<infrastructure>" with name "<name>"
     Then I check that the data response is "<info>" 

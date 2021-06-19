@@ -5,7 +5,7 @@ Feature: [data-radar] API queries (Several infrastructures of a type) - use_case
   I want to check all queries (Several infrastructures of a type) for this API
 
 
-  @id_test @<use_case_ref> @several_infrastructures @several_<infrastructures> @several_<infrastructures>_all_information
+  @<id_test> @<use_case_ref> @several_infrastructures @several_<infrastructures> @several_<infrastructures>_all_information
   Scenario Outline: <id_test>: I check the query to "get all information from several <infrastructures>" - use_case_ref: <use_case_ref>
     When I get the "<infrastructures>" with names "<names>"
     Then I verify that the data response is the content of the file "<file>"
@@ -21,7 +21,7 @@ Feature: [data-radar] API queries (Several infrastructures of a type) - use_case
       | DR-189  | 3.28         | security_forces | Bomberos test_qa_002                            | several_security_forces_all_fields.json |
 
 
-  @id_test @<use_case_ref> @several_infrastructures @several_<infrastructures> @several_<infrastructures>_one_field
+  @<id_test> @<use_case_ref> @several_infrastructures @several_<infrastructures> @several_<infrastructures>_one_field
   Scenario Outline: <id_test>: I check the query to "get the field (<field>) from several <infrastructures>" - use_case_ref: <use_case_ref>
     When I get the field "<field>" from "<infrastructures>" with names "<names>"
     Then I check that the data response is "<info>"
@@ -65,7 +65,7 @@ Feature: [data-radar] API queries (Several infrastructures of a type) - use_case
       | DR-224  | 3.28         | security_forces | Bomberos test_qa_002                            | id        | [{"id": "2"}]                                                            |
 
 
-  @id_test @<use_case_ref> @several_infrastructures @several_<infrastructures> @several_<infrastructures>_several_fields
+  @<id_test> @<use_case_ref> @several_infrastructures @several_<infrastructures> @several_<infrastructures>_several_fields
   Scenario Outline: <id_test>: I check the query to "get the fields (<fields>) from several <infrastructures>" - use_case_ref: <use_case_ref>
     When I get the fields "<fields>" from "<infrastructures>" with names "<names>"
     Then I verify that the data response is the content of the file "<file>"

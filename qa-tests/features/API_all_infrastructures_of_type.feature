@@ -5,7 +5,7 @@ Feature: [data-radar] API queries (All infrastructures of a type) - use_cases (3
   I want to check all queries (All infrastructures of a type) for this API
 
 
-  @id_test @<use_case_ref> @all_infrastructures @all_<infrastructures> @all_<infrastructures>_all_information
+  @<id_test> @<use_case_ref> @all_infrastructures @all_<infrastructures> @all_<infrastructures>_all_information
   Scenario Outline: <id_test>: I check the query to "get all information from all <infrastructures>" - use_case_ref: <use_case_ref>
     When I get all "<infrastructures>"
     Then I verify that the data response is the content of the file "<file>"
@@ -21,7 +21,7 @@ Feature: [data-radar] API queries (All infrastructures of a type) - use_cases (3
       | DR-70   | 3.26         | security_forces | all_security_forces_all_fields.json |
 
 
-  @id_test @<use_case_ref> @all_infrastructures @all_<infrastructures> @all_<infrastructures>_one_field
+  @<id_test> @<use_case_ref> @all_infrastructures @all_<infrastructures> @all_<infrastructures>_one_field
   Scenario Outline: <id_test>: I check the query to "get the field (<field>) from all <infrastructures>" - use_case_ref: <use_case_ref>
     When I get the field "<field>" from all "<infrastructures>"
     Then I check that the data response is "<info>"
@@ -65,7 +65,7 @@ Feature: [data-radar] API queries (All infrastructures of a type) - use_cases (3
       | DR-105  | 3.26         | security_forces | id        | [{"id": "1"}, {"id": "2"}, {"id": "3"}, {"id": "4"}]                                                                                                                     |
 
 
-  @id_test @<use_case_ref> @all_infrastructures @all_<infrastructures> @all_<infrastructures>_several_fields
+  @<id_test> @<use_case_ref> @all_infrastructures @all_<infrastructures> @all_<infrastructures>_several_fields
   Scenario Outline: <id_test>: I check the query to "get the fields (<fields>) from all <infrastructures>" - use_case_ref: <use_case_ref>
     When I get the fields "<fields>" from all "<infrastructures>"
     Then I verify that the data response is the content of the file "<file>"  

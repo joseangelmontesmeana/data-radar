@@ -5,7 +5,7 @@ Feature: [data-radar] API queries (Nearby infrastructures of a type) - use_cases
   I want to check all queries (Nearby infrastructures of a type) for this API
 
 
-  @id_test @<use_case_ref> @nearby_infrastructures @nearby_<infrastructures> @nearby_<infrastructures>_all_information
+  @<id_test> @<use_case_ref> @nearby_infrastructures @nearby_<infrastructures> @nearby_<infrastructures>_all_information
   Scenario Outline: <id_test>: I check the query to "get all information from nearby <infrastructures>" - use_case_ref: <use_case_ref>
     When I get "<infrastructures>" in radio "<radio>" of (latitude: "<latitude>", longitude: "<longitude>")
     Then I verify that the data response is the content of the file "<file>"
@@ -21,7 +21,7 @@ Feature: [data-radar] API queries (Nearby infrastructures of a type) - use_cases
       | DR-126  | 3.27         | security_forces | 1000  | 43.5409683 | -5.661986 | nearby_security_forces_all_fields.json |
 
 
-  @id_test @<use_case_ref> @nearby_infrastructures @nearby_<infrastructures> @nearby_<infrastructures>_all_information
+  @<id_test> @<use_case_ref> @nearby_infrastructures @nearby_<infrastructures> @nearby_<infrastructures>_all_information
   Scenario Outline: <id_test>: I check the query to "get all information from nearby <infrastructures> empty" - use_case_ref: <use_case_ref>
     When I get "<infrastructures>" in radio "<radio>" of (latitude: "<latitude>", longitude: "<longitude>")
     Then I check that the data response is "<info>"
@@ -37,7 +37,7 @@ Feature: [data-radar] API queries (Nearby infrastructures of a type) - use_cases
       | DR-133  | 3.27         | security_forces | 1     | 43.5409692 | -5.671986 | []   |
 
 
-  @id_test @<use_case_ref> @nearby_infrastructures @nearby_<infrastructures> @nearby_<infrastructures>_one_field
+  @<id_test> @<use_case_ref> @nearby_infrastructures @nearby_<infrastructures> @nearby_<infrastructures>_one_field
   Scenario Outline: <id_test>: I check the query to "get the field (<field>) from nearby <infrastructures>" - use_case_ref: <use_case_ref>
     When I get the field "<field>" from nearby "<infrastructures>" in radio "<radio>" of (latitude: "43.5409683", longitude: "-5.661986")
     Then I check that the data response is "<info>"
@@ -81,7 +81,7 @@ Feature: [data-radar] API queries (Nearby infrastructures of a type) - use_cases
       | DR-168  | 3.27         | security_forces | id        | 1000  | [{"id": "2"}]                                                                                                                        |
 
 
-  @id_test @<use_case_ref> @nearby_infrastructures @nearby_<infrastructures> @nearby_<infrastructures>_several_fields
+  @<id_test> @<use_case_ref> @nearby_infrastructures @nearby_<infrastructures> @nearby_<infrastructures>_several_fields
   Scenario Outline: <id_test>: I check the query to "get the fields (<fields>) from nearby <infrastructures>" - use_case_ref: <use_case_ref>
     When I get the fields "<fields>" from nearby "<infrastructures>" in radio "<radio>" of (latitude: "43.5409683", longitude: "-5.661986")
     Then I verify that the data response is the content of the file "<file>"
