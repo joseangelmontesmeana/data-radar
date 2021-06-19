@@ -37,6 +37,11 @@ test: up
 	$(DOCKER_COMPOSE) exec api python manage.py test
 	$(DOCKER_COMPOSE) down
 
+.PHONY: qa-tests
+qa-tests:
+	$(DOCKER_COMPOSE) -f docker-compose-qa.yml up --build qa
+	$(DOCKER_COMPOSE) -f docker-compose-qa.yml down
+
 .PHONY: import_data
 import_data:
 	$(DOCKER_COMPOSE) exec api python manage.py load_data

@@ -68,7 +68,7 @@ Feature: [data-radar] API queries (All infrastructures of a type) - use_cases (3
   @<id_test> @<use_case_ref> @all_infrastructures @all_<infrastructures> @all_<infrastructures>_several_fields
   Scenario Outline: <id_test>: I check the query to "get the fields (<fields>) from all <infrastructures>" - use_case_ref: <use_case_ref>
     When I get the fields "<fields>" from all "<infrastructures>"
-    Then I verify that the data response is the content of the file "<file>"  
+    Then I verify that the data response is the content of the file "<file>"
 
     Examples:
       | id_test | use_case_ref | infrastructures | fields             | file                                               |

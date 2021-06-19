@@ -1,0 +1,22 @@
+FROM python:3.7-slim as deploy
+
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1
+ENV PYTHONUNBUFFERED 1
+
+RUN apt-get update && \
+    apt-get install -y ca-certificates \
+    gcc \
+    curl \
+    git \
+    default-libmysqlclient-dev \
+    mariadb-client-10.3
+
+COPY qa-tests/qa-requirements.txt /tmp/qa-requirements.txt
+RUN pip install -r /tmp/qa-requirements.txt
+COPY wait-for-it.sh /scripts/wait-for-it.sh
+COPY ./qa-tests/ /qa-tests/
+WORKDIR /qa-tests
+
+
+# RUN python manage.py collectstatic
+ENTRYPOINT ["behave"]
