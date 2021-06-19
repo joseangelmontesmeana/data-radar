@@ -1,0 +1,16 @@
+[
+   {
+      "name":"Monumento test_qa_003",
+      "latitude":43.5322015,
+      "longitude":-5.6611195,
+      "phone":"985000033",
+      "id":"3"
+   },
+   {
+      "name":"Monumento test_qa_004",
+      "latitude":43.5490624,
+      "longitude":-5.6376448,
+      "phone":"985000034",
+      "id":"4"
+   }
+]

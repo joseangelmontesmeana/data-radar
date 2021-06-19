@@ -1,0 +1,18 @@
+{
+   "data":{
+      "getNurserySchool":{
+         "name":"Escuela infantil test_qa_001",
+         "latitude":43.528987,
+         "longitude":-5.640641,
+         "phone":"985000051",
+         "id":"1"
+      },
+      "getSchool":{
+         "name":"Colegio test_qa_002",
+         "latitude":43.530002,
+         "longitude":-5.643543,
+         "phone":"985000062",
+         "id":"2"
+      }
+   }
+}

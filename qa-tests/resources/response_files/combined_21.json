@@ -1,0 +1,29 @@
+{
+   "data":{
+      "getNearbySecurityForces":[
+         {
+            "name":"Bomberos test_qa_002",
+            "latitude":43.535219,
+            "longitude":-5.658845,
+            "phone":"985000072",
+            "id":"2"
+         }
+      ],
+      "getNearbyHighSchools":[
+         {
+            "name":"I.E.S. test_qa_002",
+            "latitude":43.532827,
+            "longitude":-5.670317,
+            "phone":"985000012",
+            "id":"2"
+         },
+         {
+            "name":"I.E.S. test_qa_004",
+            "latitude":43.533349,
+            "longitude":-5.669581,
+            "phone":"985000014",
+            "id":"4"
+         }
+      ]
+   }
+}

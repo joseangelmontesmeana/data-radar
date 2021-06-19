@@ -1,0 +1,29 @@
+{
+   "data":{
+      "getListSecurityForces":[
+         {
+            "name":"Bomberos test_qa_002",
+            "latitude":43.535219,
+            "longitude":-5.658845,
+            "phone":"985000072",
+            "id":"2"
+         }
+      ],
+      "getListHighSchools":[
+         {
+            "name":"I.E.S. test_qa_001",
+            "latitude":43.533349,
+            "longitude":-5.63369,
+            "phone":"985000011",
+            "id":"1"
+         },
+         {
+            "name":"I.E.S. test_qa_003",
+            "latitude":43.53516,
+            "longitude":-5.63369,
+            "phone":"985000013",
+            "id":"3"
+         }
+      ]
+   }
+}

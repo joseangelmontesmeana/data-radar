@@ -1,0 +1,22 @@
+[
+   {
+      "name":"Museo test_qa_001",
+      "id":"1",
+      "phone":"985000041"
+   },
+   {
+      "name":"Museo test_qa_002",
+      "id":"2",
+      "phone":"985000042"
+   },
+   {
+      "name":"Museo test_qa_003",
+      "id":"3",
+      "phone":"985000043"
+   },
+   {
+      "name":"Museo test_qa_004",
+      "id":"4",
+      "phone":"985000044"
+   }
+]

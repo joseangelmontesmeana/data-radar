@@ -1,0 +1,30 @@
+[
+   {
+      "name":"Bomberos test_qa_001",
+      "latitude":43.515687,
+      "longitude":-5.679437,
+      "phone":"985000071",
+      "id":"1"
+   },
+   {
+      "name":"Bomberos test_qa_002",
+      "latitude":43.535219,
+      "longitude":-5.658845,
+      "phone":"985000072",
+      "id":"2"
+   },
+   {
+      "name":"Guardia Civil test_qa_003",
+      "latitude":43.531938,
+      "longitude":-5.650687,
+      "phone":"985000073",
+      "id":"3"
+   },
+   {
+      "name":"Guardia Civil test_qa_004",
+      "latitude":43.538331,
+      "longitude":-5.677187,
+      "phone":"985000074",
+      "id":"4"
+   }
+]

@@ -1,0 +1,43 @@
+{
+   "data":{
+      "getNearbyLibraries":[
+         {
+            "name":"Biblioteca test_qa_001",
+            "latitude":43.5409683,
+            "longitude":-5.661986,
+            "phone":"985000021",
+            "id":"1"
+         },
+         {
+            "name":"Biblioteca test_qa_002",
+            "latitude":43.539022,
+            "longitude":-5.650375,
+            "phone":"985000022",
+            "id":"2"
+         }
+      ],
+      "getNearbyMonuments":[
+         {
+            "name":"Monumento test_qa_001",
+            "latitude":43.5352342,
+            "longitude":-5.6839832,
+            "phone":"985000031",
+            "id":"1"
+         },
+         {
+            "name":"Monumento test_qa_002",
+            "latitude":43.5480321,
+            "longitude":-5.6386973,
+            "phone":"985000032",
+            "id":"2"
+         },
+         {
+            "name":"Monumento test_qa_003",
+            "latitude":43.5322015,
+            "longitude":-5.6611195,
+            "phone":"985000033",
+            "id":"3"
+         }
+      ]
+   }
+}
