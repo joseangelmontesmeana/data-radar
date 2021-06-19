@@ -5,7 +5,7 @@ Feature: [data-radar] API queries (Combined infrastructures) - use_case (3.29)
   I want to check queries (Combined infrastructures) for this API
 
 
- @<use_case_ref> @combined_queries
+  @id_test @<use_case_ref> @combined_queries
   Scenario Outline: <id_test>: I check the combined query to "get all <infrastructures_1> and all <infrastructures_2>" - use_case_ref: <use_case_ref>
     When I get combined query all "<infrastructures_1>" and all "<infrastructures_2>"
     Then I verify that the response content is the content of the file "<file>"
@@ -21,7 +21,7 @@ Feature: [data-radar] API queries (Combined infrastructures) - use_case (3.29)
       | DR-245  | 3.29         | security_forces   | high_schools      | combined_7.json |
 
 
- @<use_case_ref> @combined_queries
+  @id_test @<use_case_ref> @combined_queries
   Scenario Outline: <id_test>: I check the combined query to "get specific <infrastructure_1> and specific <infrastructure_2>" - use_case_ref: <use_case_ref>
     When I get combined query <infrastructure_1>: "<name_1>" with and specific <infrastructure_2>: "<name_2>"
     Then I verify that the response content is the content of the file "<file>"
@@ -37,7 +37,7 @@ Feature: [data-radar] API queries (Combined infrastructures) - use_case (3.29)
       | DR-252  | 3.29         | security_forces  | Bomberos test_qa_002         | high_school      | I.E.S. test_qa_001           | combined_14.json |
 
 
-  @<use_case_ref> @combined_queries
+  @id_test @<use_case_ref> @combined_queries
   Scenario Outline: <id_test>: I check the combined query to "get nearby <infrastructures_1> and nearby <infrastructures_2>" - use_case_ref: <use_case_ref>
     When I get combined query <infrastructures_1> in radio "<radio_1>" and <infrastructures_2> in radio "<radio_2>" of (latitude: "43.5409683", longitude: "-5.661986")
     Then I verify that the response content is the content of the file "<file>"
@@ -53,7 +53,7 @@ Feature: [data-radar] API queries (Combined infrastructures) - use_case (3.29)
       | DR-259  | 3.29         | security_forces   | 1000    | high_schools      | 2000    | combined_21.json |
 
 
-  @<use_case_ref> @combined_queries
+  @id_test @<use_case_ref> @combined_queries
   Scenario Outline: <id_test>: I check the combined query to "get several <infrastructures_1> and several <infrastructures_2>" - use_case_ref: <use_case_ref>
     When I get combined query <infrastructures_1> with names "<names_1>" and <infrastructures_2> with names "<names_2>"
     Then I verify that the response content is the content of the file "<file>"
