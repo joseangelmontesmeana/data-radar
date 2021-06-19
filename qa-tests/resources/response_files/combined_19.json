@@ -1,0 +1,57 @@
+{
+   "data":{
+      "getNearbyNurserySchools":[
+         {
+            "name":"Escuela infantil test_qa_001",
+            "latitude":43.528987,
+            "longitude":-5.640641,
+            "phone":"985000051",
+            "id":"1"
+         },
+         {
+            "name":"Escuela infantil test_qa_003",
+            "latitude":43.512529,
+            "longitude":-5.668848,
+            "phone":"985000053",
+            "id":"3"
+         },
+         {
+            "name":"Escuela infantil test_qa_004",
+            "latitude":43.527661,
+            "longitude":-5.684005,
+            "phone":"985000054",
+            "id":"4"
+         }
+      ],
+      "getNearbySchools":[
+         {
+            "name":"Colegio test_qa_001",
+            "latitude":43.528448,
+            "longitude":-5.671051,
+            "phone":"985000061",
+            "id":"1"
+         },
+         {
+            "name":"Colegio test_qa_002",
+            "latitude":43.530002,
+            "longitude":-5.643543,
+            "phone":"985000062",
+            "id":"2"
+         },
+         {
+            "name":"Colegio test_qa_003",
+            "latitude":43.527188,
+            "longitude":-5.654062,
+            "phone":"985000063",
+            "id":"3"
+         },
+         {
+            "name":"Colegio test_qa_004",
+            "latitude":43.520813,
+            "longitude":-5.750437,
+            "phone":"985000064",
+            "id":"4"
+         }
+      ]
+   }
+}

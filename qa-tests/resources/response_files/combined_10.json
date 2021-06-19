@@ -1,0 +1,18 @@
+{
+   "data":{
+      "getMonument":{
+         "name":"Monumento test_qa_004",
+         "latitude":43.5490624,
+         "longitude":-5.6376448,
+         "phone":"985000034",
+         "id":"4"
+      },
+      "getMuseum":{
+         "name":"Museo test_qa_002",
+         "latitude":43.5453,
+         "longitude":-5.663616,
+         "phone":"985000042",
+         "id":"2"
+      }
+   }
+}

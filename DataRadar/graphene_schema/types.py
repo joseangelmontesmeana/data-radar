@@ -74,11 +74,11 @@ class Query(object):
         return get_nearby_items(HighSchool, info, **kwargs)
 
     # Library inquiries
-    get_high_library = graphene.Field(
+    get_library = graphene.Field(
         LibraryType, id=graphene.Int(), name=graphene.String()
     )
     get_all_libraries = graphene.List(LibraryType)
-    get_list_high_schools = graphene.List(
+    get_list_libraries = graphene.List(
         LibraryType, names=graphene.List(graphene.String)
     )
     get_nearby_libraries = graphene.List(

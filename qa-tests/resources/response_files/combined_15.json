@@ -1,0 +1,36 @@
+{
+   "data":{
+      "getNearbyHighSchools":[
+         {
+            "name":"I.E.S. test_qa_002",
+            "latitude":43.532827,
+            "longitude":-5.670317,
+            "phone":"985000012",
+            "id":"2"
+         },
+         {
+            "name":"I.E.S. test_qa_004",
+            "latitude":43.533349,
+            "longitude":-5.669581,
+            "phone":"985000014",
+            "id":"4"
+         }
+      ],
+      "getNearbyLibraries":[
+         {
+            "name":"Biblioteca test_qa_001",
+            "latitude":43.5409683,
+            "longitude":-5.661986,
+            "phone":"985000021",
+            "id":"1"
+         },
+         {
+            "name":"Biblioteca test_qa_002",
+            "latitude":43.539022,
+            "longitude":-5.650375,
+            "phone":"985000022",
+            "id":"2"
+         }
+      ]
+   }
+}

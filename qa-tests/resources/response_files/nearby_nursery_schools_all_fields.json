@@ -1,0 +1,23 @@
+[
+   {
+      "name":"Escuela infantil test_qa_001",
+      "latitude":43.528987,
+      "longitude":-5.640641,
+      "phone":"985000051",
+      "id":"1"
+   },
+   {
+      "name":"Escuela infantil test_qa_003",
+      "latitude":43.512529,
+      "longitude":-5.668848,
+      "phone":"985000053",
+      "id":"3"
+   },
+   {
+      "name":"Escuela infantil test_qa_004",
+      "latitude":43.527661,
+      "longitude":-5.684005,
+      "phone":"985000054",
+      "id":"4"
+   }
+]

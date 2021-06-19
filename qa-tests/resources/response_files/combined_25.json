@@ -1,0 +1,29 @@
+{
+   "data":{
+      "getListMuseums":[
+         {
+            "name":"Museo test_qa_001",
+            "latitude":43.544187,
+            "longitude":-5.663812,
+            "phone":"985000041",
+            "id":"1"
+         },
+         {
+            "name":"Museo test_qa_002",
+            "latitude":43.5453,
+            "longitude":-5.663616,
+            "phone":"985000042",
+            "id":"2"
+         }
+      ],
+      "getListNurserySchools":[
+         {
+            "name":"Escuela infantil test_qa_003",
+            "latitude":43.512529,
+            "longitude":-5.668848,
+            "phone":"985000053",
+            "id":"3"
+         }
+      ]
+   }
+}

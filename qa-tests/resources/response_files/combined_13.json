@@ -1,0 +1,18 @@
+{
+   "data":{
+      "getSchool":{
+         "name":"Colegio test_qa_002",
+         "latitude":43.530002,
+         "longitude":-5.643543,
+         "phone":"985000062",
+         "id":"2"
+      },
+      "getSecurityForces":{
+         "name":"Bomberos test_qa_002",
+         "latitude":43.535219,
+         "longitude":-5.658845,
+         "phone":"985000072",
+         "id":"2"
+      }
+   }
+}

@@ -1,0 +1,16 @@
+[
+   {
+      "name":"Biblioteca test_qa_002",
+      "latitude":43.539022,
+      "longitude":-5.650375,
+      "phone":"985000022",
+      "id":"2"
+   },
+   {
+      "name":"Biblioteca test_qa_003",
+      "latitude":43.53,
+      "longitude":-5.675,
+      "phone":"985000023",
+      "id":"3"
+   }
+]
