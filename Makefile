@@ -32,13 +32,13 @@ up:
 down:
 	$(DOCKER_COMPOSE) down
 
-.PHONY: test
-test: up
+.PHONY: unit_tests
+unit_tests: up
 	$(DOCKER_COMPOSE) exec api python manage.py test
 	$(DOCKER_COMPOSE) down
 
-.PHONY: qa-tests
-qa-tests:
+.PHONY: qa_tests
+qa_tests:
 	$(DOCKER_COMPOSE) -f docker-compose-qa.yml up --build qa
 	$(DOCKER_COMPOSE) -f docker-compose-qa.yml down
 

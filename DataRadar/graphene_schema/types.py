@@ -7,7 +7,15 @@ from graphene_schema.queries_logic import (
     get_list_items,
     get_nearby_items,
 )
-from radar.models import HighSchool, Library, Monument, Museum, NurserySchool, School, SecurityForce
+from radar.models import (
+    HighSchool,
+    Library,
+    Monument,
+    Museum,
+    NurserySchool,
+    School,
+    SecurityForce,
+)
 
 
 class HighSchoolType(DjangoObjectType):
@@ -74,9 +82,7 @@ class Query(object):
         return get_nearby_items(HighSchool, info, **kwargs)
 
     # Library inquiries
-    get_library = graphene.Field(
-        LibraryType, id=graphene.Int(), name=graphene.String()
-    )
+    get_library = graphene.Field(LibraryType, id=graphene.Int(), name=graphene.String())
     get_all_libraries = graphene.List(LibraryType)
     get_list_libraries = graphene.List(
         LibraryType, names=graphene.List(graphene.String)
@@ -151,9 +157,13 @@ class Query(object):
         return get_nearby_items(Museum, info, **kwargs)
 
     # Nursery schools inquiries
-    get_nursery_school = graphene.Field(NurserySchoolType, id=graphene.Int(), name=graphene.String())
+    get_nursery_school = graphene.Field(
+        NurserySchoolType, id=graphene.Int(), name=graphene.String()
+    )
     get_all_nursery_schools = graphene.List(NurserySchoolType)
-    get_list_nursery_schools = graphene.List(NurserySchoolType, names=graphene.List(graphene.String))
+    get_list_nursery_schools = graphene.List(
+        NurserySchoolType, names=graphene.List(graphene.String)
+    )
     get_nearby_nursery_schools = graphene.List(
         NurserySchoolType,
         latitude=graphene.Float(required=True),
@@ -197,9 +207,13 @@ class Query(object):
         return get_nearby_items(School, info, **kwargs)
 
     # Security forces inquiries
-    get_security_forces = graphene.Field(SecurityForceType, id=graphene.Int(), name=graphene.String())
+    get_security_forces = graphene.Field(
+        SecurityForceType, id=graphene.Int(), name=graphene.String()
+    )
     get_all_security_forces = graphene.List(SecurityForceType)
-    get_list_security_forces = graphene.List(SecurityForceType, names=graphene.List(graphene.String))
+    get_list_security_forces = graphene.List(
+        SecurityForceType, names=graphene.List(graphene.String)
+    )
     get_nearby_security_forces = graphene.List(
         SecurityForceType,
         latitude=graphene.Float(required=True),

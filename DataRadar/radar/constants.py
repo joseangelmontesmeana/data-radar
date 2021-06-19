@@ -1,4 +1,12 @@
-from radar.models import HighSchool, Library, Museum, Monument, NurserySchool, School, SecurityForce
+from radar.models import (
+    HighSchool,
+    Library,
+    Monument,
+    Museum,
+    NurserySchool,
+    School,
+    SecurityForce,
+)
 
 # LOAD DATA ARGUMENTS
 DATA_DIRECTORY = "data/"
@@ -13,5 +21,5 @@ TABLES = {
     "Monuments": Monument,
     "NurserySchools": NurserySchool,
     "Schools": School,
-    "SecurityForces": SecurityForce
+    "SecurityForces": SecurityForce,
 }

@@ -7,73 +7,153 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('radar', '0004_delete_pharmacy'),
+        ("radar", "0004_delete_pharmacy"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='HighSchool',
+            name="HighSchool",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=150)),
-                ('phone', models.CharField(max_length=9, validators=[django.core.validators.RegexValidator('^98(\\d){7}$', message='Use formato: 98XXXXXXX')])),
-                ('latitude', models.DecimalField(decimal_places=7, max_digits=12)),
-                ('longitude', models.DecimalField(decimal_places=7, max_digits=12)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=150)),
+                (
+                    "phone",
+                    models.CharField(
+                        max_length=9,
+                        validators=[
+                            django.core.validators.RegexValidator(
+                                "^98(\\d){7}$", message="Use formato: 98XXXXXXX"
+                            )
+                        ],
+                    ),
+                ),
+                ("latitude", models.DecimalField(decimal_places=7, max_digits=12)),
+                ("longitude", models.DecimalField(decimal_places=7, max_digits=12)),
             ],
-            options={
-                'abstract': False,
-            },
+            options={"abstract": False,},
         ),
         migrations.CreateModel(
-            name='Library',
+            name="Library",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=150)),
-                ('phone', models.CharField(max_length=9, validators=[django.core.validators.RegexValidator('^98(\\d){7}$', message='Use formato: 98XXXXXXX')])),
-                ('latitude', models.DecimalField(decimal_places=7, max_digits=12)),
-                ('longitude', models.DecimalField(decimal_places=7, max_digits=12)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=150)),
+                (
+                    "phone",
+                    models.CharField(
+                        max_length=9,
+                        validators=[
+                            django.core.validators.RegexValidator(
+                                "^98(\\d){7}$", message="Use formato: 98XXXXXXX"
+                            )
+                        ],
+                    ),
+                ),
+                ("latitude", models.DecimalField(decimal_places=7, max_digits=12)),
+                ("longitude", models.DecimalField(decimal_places=7, max_digits=12)),
             ],
-            options={
-                'abstract': False,
-            },
+            options={"abstract": False,},
         ),
         migrations.CreateModel(
-            name='NurserySchool',
+            name="NurserySchool",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=150)),
-                ('phone', models.CharField(max_length=9, validators=[django.core.validators.RegexValidator('^98(\\d){7}$', message='Use formato: 98XXXXXXX')])),
-                ('latitude', models.DecimalField(decimal_places=7, max_digits=12)),
-                ('longitude', models.DecimalField(decimal_places=7, max_digits=12)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=150)),
+                (
+                    "phone",
+                    models.CharField(
+                        max_length=9,
+                        validators=[
+                            django.core.validators.RegexValidator(
+                                "^98(\\d){7}$", message="Use formato: 98XXXXXXX"
+                            )
+                        ],
+                    ),
+                ),
+                ("latitude", models.DecimalField(decimal_places=7, max_digits=12)),
+                ("longitude", models.DecimalField(decimal_places=7, max_digits=12)),
             ],
-            options={
-                'abstract': False,
-            },
+            options={"abstract": False,},
         ),
         migrations.CreateModel(
-            name='School',
+            name="School",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=150)),
-                ('phone', models.CharField(max_length=9, validators=[django.core.validators.RegexValidator('^98(\\d){7}$', message='Use formato: 98XXXXXXX')])),
-                ('latitude', models.DecimalField(decimal_places=7, max_digits=12)),
-                ('longitude', models.DecimalField(decimal_places=7, max_digits=12)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=150)),
+                (
+                    "phone",
+                    models.CharField(
+                        max_length=9,
+                        validators=[
+                            django.core.validators.RegexValidator(
+                                "^98(\\d){7}$", message="Use formato: 98XXXXXXX"
+                            )
+                        ],
+                    ),
+                ),
+                ("latitude", models.DecimalField(decimal_places=7, max_digits=12)),
+                ("longitude", models.DecimalField(decimal_places=7, max_digits=12)),
             ],
-            options={
-                'abstract': False,
-            },
+            options={"abstract": False,},
         ),
         migrations.CreateModel(
-            name='SecurityForce',
+            name="SecurityForce",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=150)),
-                ('phone', models.CharField(max_length=9, validators=[django.core.validators.RegexValidator('^98(\\d){7}$', message='Use formato: 98XXXXXXX')])),
-                ('latitude', models.DecimalField(decimal_places=7, max_digits=12)),
-                ('longitude', models.DecimalField(decimal_places=7, max_digits=12)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=150)),
+                (
+                    "phone",
+                    models.CharField(
+                        max_length=9,
+                        validators=[
+                            django.core.validators.RegexValidator(
+                                "^98(\\d){7}$", message="Use formato: 98XXXXXXX"
+                            )
+                        ],
+                    ),
+                ),
+                ("latitude", models.DecimalField(decimal_places=7, max_digits=12)),
+                ("longitude", models.DecimalField(decimal_places=7, max_digits=12)),
             ],
-            options={
-                'abstract': False,
-            },
+            options={"abstract": False,},
         ),
     ]
