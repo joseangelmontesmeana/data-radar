@@ -7,7 +7,7 @@ services:
     container_name: db
     environment:
       - MYSQL_ROOT_PASSWORD=password_for_root
-      - MYSQL_DATABASE=radar_db
+      - MYSQL_DATABASE=radar_db_qa
       - MYSQL_USER=radar
       - MYSQL_PASSWORD=radar
 
@@ -16,7 +16,7 @@ services:
     depends_on:
       - db
     environment:
-      - DB_NAME=radar_db
+      - DB_NAME=radar_db_qa
       - DB_USER=radar
       - DB_PASSWORD=radar
       - DB_HOST=db
@@ -31,7 +31,7 @@ services:
     depends_on:
       - api
     environment:
-      - DB_NAME=radar_db
+      - DB_NAME=radar_db_qa
       - DB_USER=radar
       - DB_PASSWORD=radar
       - DB_HOST=db
