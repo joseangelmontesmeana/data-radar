@@ -8,6 +8,9 @@ python-decouple==3.1
 django-mysql==3.2.0
 mysqlclient==1.4.4
 
+# For statics files
+whitenoise==5.2.0
+
 # For use coordinates
 geopy==1.21.0
 

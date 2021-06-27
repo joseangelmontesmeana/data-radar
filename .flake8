@@ -12,5 +12,6 @@ exclude =
     **/dev.py
     **/prod.py
     **/default.py
+    **/qa_env/*.py
     env/
     env2/

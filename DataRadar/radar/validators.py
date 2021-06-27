@@ -15,7 +15,7 @@ def validate_phone(phone):
     p = re.compile("98\\d\\d\\d\\d\\d\\d\\d")
     fix_phone = next(iter(p.findall(phone)), "")
 
-    p = re.compile("6\\d\\d\\d\\d\\d\\d\\d\\d")
+    p = re.compile("[6,7]\\d\\d\\d\\d\\d\\d\\d\\d")
     mobile_phone = next(iter(p.findall(phone)), "")
 
     if fix_phone == "" and mobile_phone == "":
