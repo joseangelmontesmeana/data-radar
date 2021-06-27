@@ -13,5 +13,6 @@ exclude =
     **/prod.py
     **/default.py
     **/qa_env/*.py
+    qa_env/
     env/
     env2/

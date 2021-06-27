@@ -43,7 +43,8 @@ class QueriesLogicTestCase(TestCase):
         self.assertListEqual(names, [i.name for i in it])
         self.assertListEqual(phones, [i.phone for i in it])
 
-    def setUp(self):
+    @classmethod
+    def setUpClass(cls):
         HighSchool.objects.create(
             name="I.E.S. test_unit_001",
             phone="985000011",
@@ -170,6 +171,16 @@ class QueriesLogicTestCase(TestCase):
             latitude=43.531938,
             longitude=-5.650687,
         )
+
+    @classmethod
+    def tearDownClass(cls):
+        HighSchool.objects.all().delete()
+        Library.objects.all().delete()
+        Monument.objects.all().delete()
+        Museum.objects.all().delete()
+        NurserySchool.objects.all().delete()
+        School.objects.all().delete()
+        SecurityForce.objects.all().delete()
 
     def test_get_item_high_school_1(self):
         self._get_item(
