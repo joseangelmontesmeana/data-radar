@@ -73,7 +73,7 @@ class Query(object):
         return get_item(HighSchool, info, **kwargs)
 
     def resolve_get_all_high_schools(self, info, **kwargs):
-        return get_all_items(HighSchool)
+        return get_all_items(HighSchool, info, **kwargs)
 
     def resolve_get_list_high_schools(self, info, **kwargs):
         return get_list_items(HighSchool, info, **kwargs)
@@ -98,7 +98,7 @@ class Query(object):
         return get_item(Library, info, **kwargs)
 
     def resolve_get_all_libraries(self, info, **kwargs):
-        return get_all_items(Library)
+        return get_all_items(Library, info, **kwargs)
 
     def resolve_get_list_libraries(self, info, **kwargs):
         return get_list_items(Library, info, **kwargs)
@@ -125,7 +125,7 @@ class Query(object):
         return get_item(Monument, info, **kwargs)
 
     def resolve_get_all_monuments(self, info, **kwargs):
-        return get_all_items(Monument)
+        return get_all_items(Monument, info, **kwargs)
 
     def resolve_get_list_monuments(self, info, **kwargs):
         return get_list_items(Monument, info, **kwargs)
@@ -148,7 +148,7 @@ class Query(object):
         return get_item(Museum, info, **kwargs)
 
     def resolve_get_all_museums(self, info, **kwargs):
-        return get_all_items(Museum)
+        return get_all_items(Museum, info, **kwargs)
 
     def resolve_get_list_museums(self, info, **kwargs):
         return get_list_items(Museum, info, **kwargs)
@@ -175,7 +175,7 @@ class Query(object):
         return get_item(NurserySchool, info, **kwargs)
 
     def resolve_get_all_nursery_schools(self, info, **kwargs):
-        return get_all_items(NurserySchool)
+        return get_all_items(NurserySchool, info, **kwargs)
 
     def resolve_get_list_nursery_schools(self, info, **kwargs):
         return get_list_items(NurserySchool, info, **kwargs)
@@ -198,7 +198,7 @@ class Query(object):
         return get_item(School, info, **kwargs)
 
     def resolve_get_all_schools(self, info, **kwargs):
-        return get_all_items(School)
+        return get_all_items(School, info, **kwargs)
 
     def resolve_get_list_schools(self, info, **kwargs):
         return get_list_items(School, info, **kwargs)
@@ -225,7 +225,7 @@ class Query(object):
         return get_item(SecurityForce, info, **kwargs)
 
     def resolve_get_all_security_forces(self, info, **kwargs):
-        return get_all_items(SecurityForce)
+        return get_all_items(SecurityForce, info, **kwargs)
 
     def resolve_get_list_security_forces(self, info, **kwargs):
         return get_list_items(SecurityForce, info, **kwargs)

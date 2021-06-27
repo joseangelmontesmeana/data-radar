@@ -11,7 +11,7 @@ def get_item(item_type, info, **kwargs):
     return None
 
 
-def get_all_items(item_type):
+def get_all_items(item_type, info, **kwargs):
     return item_type.objects.all()
 
 
