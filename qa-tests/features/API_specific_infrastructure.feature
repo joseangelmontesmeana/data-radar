@@ -83,7 +83,7 @@ Feature: [data-radar] API queries (To a specific infrastructure) - use_cases (3.
 
 
   @<id_test> @<use_case_ref> @specific_infrastructure @specific_<infrastructure> @specific_<infrastructure>_several_fields
-  Scenario Outline: <id_test>: I check the query to "get the fields (<fields>) from a specific <infrastructure> - use_case_ref: <use_case_ref>
+  Scenario Outline: <id_test>: I check the query to "get the fields (<fields>) from a specific <infrastructure>" - use_case_ref: <use_case_ref>
     When I get the fields "<fields>" from a "<infrastructure>" with name "<name>"
     Then I check that the data response is "<info>"
 

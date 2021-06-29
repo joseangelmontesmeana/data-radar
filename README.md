@@ -123,5 +123,20 @@ docker-compose down
 # asegurarse de disponer de dichos ficheros en el directorio DataRadar/data/ del proyecto.
 ```
 
+#### Ejecución de test unitarios
+En fase de desarrollo se han ido implementando test unitarios que nos permiten validar algunas de las funciones de
+código más interesantes. Para correr estos tests basta con ejecutar el siguiente comando:
+```
+make unit_tests
+```
+#### Ejecución del plan de pruebas automatizado (QA)
+Con el fin de garantizar la calidad del software se ha optado por implementar un plan de pruebas automatizado que 
+permita validar todos los casos de uso referentes a la API de manera automática. Para ejecutar estos tests solo será 
+necesario ejecutar el siguiente comando:
+```
+make qa_tests
+```
+
+#### Otras funcionalidades
 Además de estas funcionalidades, en el [Makefile](https://github.com/joseangelmontesmeana/data-radar/blob/master/Makefile)
 se definen algunas otras que pueden resultar interesantes en fase de desarrollo.

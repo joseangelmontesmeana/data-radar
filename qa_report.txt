@@ -1,0 +1,280 @@
+Feature: [data-radar] API queries (All infrastructures of a type)
+Use Cases: 3.2 - 3.6 - 3.10 - 3.14 - 3.18 - 3.22 - 3.26
+DR-64: I check the query to "get all information from all high_schools" - 3.2 - OK
+DR-65: I check the query to "get all information from all libraries" - 3.6 - OK
+DR-66: I check the query to "get all information from all monuments" - 3.10 - OK
+DR-67: I check the query to "get all information from all museums" - 3.14 - OK
+DR-68: I check the query to "get all information from all nursery_schools" - 3.18 - OK
+DR-69: I check the query to "get all information from all schools" - 3.22 - OK
+DR-70: I check the query to "get all information from all security_forces" - 3.26 - OK
+DR-71: I check the query to "get the field (name) from all high_schools" - 3.2 - OK
+DR-72: I check the query to "get the field (latitude) from all high_schools" - 3.2 - OK
+DR-73: I check the query to "get the field (longitude) from all high_schools" - 3.2 - OK
+DR-74: I check the query to "get the field (phone) from all high_schools" - 3.2 - OK
+DR-75: I check the query to "get the field (id) from all high_schools" - 3.2 - OK
+DR-76: I check the query to "get the field (name) from all libraries" - 3.6 - OK
+DR-77: I check the query to "get the field (latitude) from all libraries" - 3.6 - OK
+DR-78: I check the query to "get the field (longitude) from all libraries" - 3.6 - OK
+DR-79: I check the query to "get the field (phone) from all libraries" - 3.6 - OK
+DR-80: I check the query to "get the field (id) from all libraries" - 3.6 - OK
+DR-81: I check the query to "get the field (name) from all monuments" - 3.10 - OK
+DR-82: I check the query to "get the field (latitude) from all monuments" - 3.10 - OK
+DR-83: I check the query to "get the field (longitude) from all monuments" - 3.10 - OK
+DR-84: I check the query to "get the field (phone) from all monuments" - 3.10 - OK
+DR-85: I check the query to "get the field (id) from all monuments" - 3.10 - OK
+DR-86: I check the query to "get the field (name) from all museums" - 3.14 - OK
+DR-87: I check the query to "get the field (latitude) from all museums" - 3.14 - OK
+DR-88: I check the query to "get the field (longitude) from all museums" - 3.14 - OK
+DR-89: I check the query to "get the field (phone) from all museums" - 3.14 - OK
+DR-90: I check the query to "get the field (id) from all museums" - 3.14 - OK
+DR-91: I check the query to "get the field (name) from all nursery_schools" - 3.18 - OK
+DR-92: I check the query to "get the field (latitude) from all nursery_schools" - 3.18 - OK
+DR-93: I check the query to "get the field (longitude) from all nursery_schools" - 3.18 - OK
+DR-94: I check the query to "get the field (phone) from all nursery_schools" - 3.18 - OK
+DR-95: I check the query to "get the field (id) from all nursery_schools" - 3.18 - OK
+DR-96: I check the query to "get the field (name) from all schools" - 3.22 - OK
+DR-97: I check the query to "get the field (latitude) from all schools" - 3.22 - OK
+DR-98: I check the query to "get the field (longitude) from all schools" - 3.22 - OK
+DR-99: I check the query to "get the field (phone) from all schools" - 3.22 - OK
+DR-100: I check the query to "get the field (id) from all schools" - 3.22 - OK
+DR-101: I check the query to "get the field (name) from all security_forces" - 3.26 - OK
+DR-102: I check the query to "get the field (latitude) from all security_forces" - 3.26 - OK
+DR-103: I check the query to "get the field (longitude) from all security_forces" - 3.26 - OK
+DR-104: I check the query to "get the field (phone) from all security_forces" - 3.26 - OK
+DR-105: I check the query to "get the field (id) from all security_forces" - 3.26 - OK
+DR-106: I check the query to "get the fields (name id phone) from all high_schools" - 3.2 - OK
+DR-107: I check the query to "get the fields (latitude longitude) from all high_schools" - 3.2 - OK
+DR-108: I check the query to "get the fields (name id phone) from all libraries" - 3.6 - OK
+DR-109: I check the query to "get the fields (latitude longitude) from all libraries" - 3.6 - OK
+DR-110: I check the query to "get the fields (name id phone) from all monuments" - 3.10 - OK
+DR-111: I check the query to "get the fields (latitude longitude) from all monuments" - 3.10 - OK
+DR-112: I check the query to "get the fields (name id phone) from all museums" - 3.14 - OK
+DR-113: I check the query to "get the fields (latitude longitude) from all museums" - 3.14 - OK
+DR-114: I check the query to "get the fields (name id phone) from all nursery_schools" - 3.18 - OK
+DR-115: I check the query to "get the fields (latitude longitude) from all nursery_schools" - 3.18 - OK
+DR-116: I check the query to "get the fields (name id phone) from all schools" - 3.22 - OK
+DR-117: I check the query to "get the fields (latitude longitude) from all schools" - 3.22 - OK
+DR-118: I check the query to "get the fields (name id phone) from all security_forces" - 3.26 - OK
+DR-119: I check the query to "get the fields (latitude longitude) from all security_forces" - 3.26 - OK
+
+Feature: [data-radar] API queries (Combined infrastructures)
+Use Cases: 3.29
+DR-239: I check the combined query to "get all high_schools and all libraries" - 3.29 - OK
+DR-240: I check the combined query to "get all libraries and all monuments" - 3.29 - OK
+DR-241: I check the combined query to "get all monuments and all museums" - 3.29 - OK
+DR-242: I check the combined query to "get all museums and all nursery_schools" - 3.29 - OK
+DR-243: I check the combined query to "get all nursery_schools and all schools" - 3.29 - OK
+DR-244: I check the combined query to "get all schools and all security_forces" - 3.29 - OK
+DR-245: I check the combined query to "get all security_forces and all high_schools" - 3.29 - OK
+DR-246: I check the combined query to "get specific high_school and specific library" - 3.29 - OK
+DR-247: I check the combined query to "get specific library and specific monument" - 3.29 - OK
+DR-248: I check the combined query to "get specific monument and specific museum" - 3.29 - OK
+DR-249: I check the combined query to "get specific museum and specific nursery_school" - 3.29 - OK
+DR-250: I check the combined query to "get specific nursery_school and specific school" - 3.29 - OK
+DR-251: I check the combined query to "get specific school and specific security_forces" - 3.29 - OK
+DR-252: I check the combined query to "get specific security_forces and specific high_school" - 3.29 - OK
+DR-253: I check the combined query to "get nearby high_schools and nearby libraries" - 3.29 - OK
+DR-254: I check the combined query to "get nearby libraries and nearby monuments" - 3.29 - OK
+DR-255: I check the combined query to "get nearby monuments and nearby museums" - 3.29 - OK
+DR-256: I check the combined query to "get nearby museums and nearby nursery_schools" - 3.29 - OK
+DR-257: I check the combined query to "get nearby nursery_schools and nearby schools" - 3.29 - OK
+DR-258: I check the combined query to "get nearby schools and nearby security_forces" - 3.29 - OK
+DR-259: I check the combined query to "get nearby security_forces and nearby high_schools" - 3.29 - OK
+DR-260: I check the combined query to "get several high_schools and several libraries" - 3.29 - OK
+DR-261: I check the combined query to "get several libraries and several monuments" - 3.29 - OK
+DR-262: I check the combined query to "get several monuments and several museums" - 3.29 - OK
+DR-263: I check the combined query to "get several museums and several nursery_schools" - 3.29 - OK
+DR-264: I check the combined query to "get several nursery_schools and several schools" - 3.29 - OK
+DR-265: I check the combined query to "get several schools and several security_forces" - 3.29 - OK
+DR-266: I check the combined query to "get several security_forces and several high_schools" - 3.29 - OK
+
+Feature: [data-radar] API queries (Nearby infrastructures of a type)
+Use Cases: 3.3 - 3.7 - 3.11 - 3.15 - 3.19 - 3.23 - 3.27
+DR-120: I check the query to "get all information from nearby high_schools" - 3.3 - OK
+DR-121: I check the query to "get all information from nearby libraries" - 3.7 - OK
+DR-122: I check the query to "get all information from nearby monuments" - 3.11 - OK
+DR-123: I check the query to "get all information from nearby museums" - 3.15 - OK
+DR-124: I check the query to "get all information from nearby nursery_schools" - 3.19 - OK
+DR-125: I check the query to "get all information from nearby schools" - 3.23 - OK
+DR-126: I check the query to "get all information from nearby security_forces" - 3.27 - OK
+DR-127: I check the query to "get all information from nearby high_schools empty" - 3.3 - OK
+DR-128: I check the query to "get all information from nearby libraries empty" - 3.7 - OK
+DR-129: I check the query to "get all information from nearby monuments empty" - 3.11 - OK
+DR-130: I check the query to "get all information from nearby museums empty" - 3.15 - OK
+DR-131: I check the query to "get all information from nearby nursery_schools empty" - 3.19 - OK
+DR-132: I check the query to "get all information from nearby schools empty" - 3.23 - OK
+DR-133: I check the query to "get all information from nearby security_forces empty" - 3.27 - OK
+DR-134: I check the query to "get the field (name) from nearby high_schools" - 3.3 - OK
+DR-135: I check the query to "get the field (latitude) from nearby high_schools" - 3.3 - OK
+DR-136: I check the query to "get the field (longitude) from nearby high_schools" - 3.3 - OK
+DR-137: I check the query to "get the field (phone) from nearby high_schools" - 3.3 - OK
+DR-138: I check the query to "get the field (id) from nearby high_schools" - 3.3 - OK
+DR-139: I check the query to "get the field (name) from nearby libraries" - 3.7 - OK
+DR-140: I check the query to "get the field (latitude) from nearby libraries" - 3.7 - OK
+DR-141: I check the query to "get the field (longitude) from nearby libraries" - 3.7 - OK
+DR-142: I check the query to "get the field (phone) from nearby libraries" - 3.7 - OK
+DR-143: I check the query to "get the field (id) from nearby libraries" - 3.7 - OK
+DR-144: I check the query to "get the field (name) from nearby monuments" - 3.11 - OK
+DR-145: I check the query to "get the field (latitude) from nearby monuments" - 3.11 - OK
+DR-146: I check the query to "get the field (longitude) from nearby monuments" - 3.11 - OK
+DR-147: I check the query to "get the field (phone) from nearby monuments" - 3.11 - OK
+DR-148: I check the query to "get the field (id) from nearby monuments" - 3.11 - OK
+DR-149: I check the query to "get the field (name) from nearby museums" - 3.15 - OK
+DR-150: I check the query to "get the field (latitude) from nearby museums" - 3.15 - OK
+DR-151: I check the query to "get the field (longitude) from nearby museums" - 3.15 - OK
+DR-152: I check the query to "get the field (phone) from nearby museums" - 3.15 - OK
+DR-153: I check the query to "get the field (id) from nearby museums" - 3.15 - OK
+DR-154: I check the query to "get the field (name) from nearby nursery_schools" - 3.19 - OK
+DR-155: I check the query to "get the field (latitude) from nearby nursery_schools" - 3.19 - OK
+DR-156: I check the query to "get the field (longitude) from nearby nursery_schools" - 3.19 - OK
+DR-157: I check the query to "get the field (phone) from nearby nursery_schools" - 3.19 - OK
+DR-158: I check the query to "get the field (id) from nearby nursery_schools" - 3.19 - OK
+DR-159: I check the query to "get the field (name) from nearby schools" - 3.23 - OK
+DR-160: I check the query to "get the field (latitude) from nearby schools" - 3.23 - OK
+DR-161: I check the query to "get the field (longitude) from nearby schools" - 3.23 - OK
+DR-162: I check the query to "get the field (phone) from nearby schools" - 3.23 - OK
+DR-163: I check the query to "get the field (id) from nearby schools" - 3.23 - OK
+DR-164: I check the query to "get the field (name) from nearby security_forces" - 3.27 - OK
+DR-165: I check the query to "get the field (latitude) from nearby security_forces" - 3.27 - OK
+DR-166: I check the query to "get the field (longitude) from nearby security_forces" - 3.27 - OK
+DR-167: I check the query to "get the field (phone) from nearby security_forces" - 3.27 - OK
+DR-168: I check the query to "get the field (id) from nearby security_forces" - 3.27 - OK
+DR-169: I check the query to "get the fields (name id phone) from nearby high_schools" - 3.3 - OK
+DR-170: I check the query to "get the fields (latitude longitude) from nearby high_schools" - 3.3 - OK
+DR-171: I check the query to "get the fields (name id phone) from nearby libraries" - 3.7 - OK
+DR-172: I check the query to "get the fields (latitude longitude) from nearby libraries" - 3.7 - OK
+DR-173: I check the query to "get the fields (name id phone) from nearby monuments" - 3.11 - OK
+DR-174: I check the query to "get the fields (latitude longitude) from nearby monuments" - 3.11 - OK
+DR-175: I check the query to "get the fields (name id phone) from nearby museums" - 3.15 - OK
+DR-176: I check the query to "get the fields (latitude longitude) from nearby museums" - 3.15 - OK
+DR-177: I check the query to "get the fields (name id phone) from nearby nursery_schools" - 3.19 - OK
+DR-178: I check the query to "get the fields (latitude longitude) from nearby nursery_schools" - 3.19 - OK
+DR-179: I check the query to "get the fields (name id phone) from nearby schools" - 3.23 - OK
+DR-180: I check the query to "get the fields (latitude longitude) from nearby schools" - 3.23 - OK
+DR-181: I check the query to "get the fields (name id phone) from nearby security_forces" - 3.27 - OK
+DR-182: I check the query to "get the fields (latitude longitude) from nearby security_forces" - 3.27 - OK
+
+Feature: [data-radar] API queries (Several infrastructures of a type)
+Use Cases: 3.4 - 3.8 - 3.12 - 3.16 - 3.20 - 3.24 - 3.28
+DR-183: I check the query to "get all information from several high_schools" - 3.4 - OK
+DR-184: I check the query to "get all information from several libraries" - 3.8 - OK
+DR-185: I check the query to "get all information from several monuments" - 3.12 - OK
+DR-186: I check the query to "get all information from several museums" - 3.16 - OK
+DR-187: I check the query to "get all information from several nursery_schools" - 3.20 - OK
+DR-188: I check the query to "get all information from several schools" - 3.24 - OK
+DR-189: I check the query to "get all information from several security_forces" - 3.28 - OK
+DR-190: I check the query to "get the field (name) from several high_schools" - 3.4 - OK
+DR-191: I check the query to "get the field (latitude) from several high_schools" - 3.4 - OK
+DR-192: I check the query to "get the field (longitude) from several high_schools" - 3.4 - OK
+DR-193: I check the query to "get the field (phone) from several high_schools" - 3.4 - OK
+DR-194: I check the query to "get the field (id) from several high_schools" - 3.4 - OK
+DR-195: I check the query to "get the field (name) from several libraries" - 3.8 - OK
+DR-196: I check the query to "get the field (latitude) from several libraries" - 3.8 - OK
+DR-197: I check the query to "get the field (longitude) from several libraries" - 3.8 - OK
+DR-198: I check the query to "get the field (phone) from several libraries" - 3.8 - OK
+DR-199: I check the query to "get the field (id) from several libraries" - 3.8 - OK
+DR-200: I check the query to "get the field (name) from several monuments" - 3.12 - OK
+DR-201: I check the query to "get the field (latitude) from several monuments" - 3.12 - OK
+DR-202: I check the query to "get the field (longitude) from several monuments" - 3.12 - OK
+DR-203: I check the query to "get the field (phone) from several monuments" - 3.12 - OK
+DR-204: I check the query to "get the field (id) from several monuments" - 3.12 - OK
+DR-205: I check the query to "get the field (name) from several museums" - 3.16 - OK
+DR-206: I check the query to "get the field (latitude) from several museums" - 3.16 - OK
+DR-207: I check the query to "get the field (longitude) from several museums" - 3.16 - OK
+DR-208: I check the query to "get the field (phone) from several museums" - 3.16 - OK
+DR-209: I check the query to "get the field (id) from several museums" - 3.16 - OK
+DR-210: I check the query to "get the field (name) from several nursery_schools" - 3.20 - OK
+DR-211: I check the query to "get the field (latitude) from several nursery_schools" - 3.20 - OK
+DR-212: I check the query to "get the field (longitude) from several nursery_schools" - 3.20 - OK
+DR-213: I check the query to "get the field (phone) from several nursery_schools" - 3.20 - OK
+DR-214: I check the query to "get the field (id) from several nursery_schools" - 3.20 - OK
+DR-215: I check the query to "get the field (name) from several schools" - 3.24 - OK
+DR-216: I check the query to "get the field (latitude) from several schools" - 3.24 - OK
+DR-217: I check the query to "get the field (longitude) from several schools" - 3.24 - OK
+DR-218: I check the query to "get the field (phone) from several schools" - 3.24 - OK
+DR-219: I check the query to "get the field (id) from several schools" - 3.24 - OK
+DR-220: I check the query to "get the field (name) from several security_forces" - 3.28 - OK
+DR-221: I check the query to "get the field (latitude) from several security_forces" - 3.28 - OK
+DR-222: I check the query to "get the field (longitude) from several security_forces" - 3.28 - OK
+DR-223: I check the query to "get the field (phone) from several security_forces" - 3.28 - OK
+DR-224: I check the query to "get the field (id) from several security_forces" - 3.28 - OK
+DR-225: I check the query to "get the fields (name id phone) from several high_schools" - 3.4 - OK
+DR-226: I check the query to "get the fields (latitude longitude) from several high_schools" - 3.4 - OK
+DR-227: I check the query to "get the fields (name id phone) from several libraries" - 3.8 - OK
+DR-228: I check the query to "get the fields (latitude longitude) from several libraries" - 3.8 - OK
+DR-229: I check the query to "get the fields (name id phone) from several monuments" - 3.12 - OK
+DR-230: I check the query to "get the fields (latitude longitude) from several monuments" - 3.12 - OK
+DR-231: I check the query to "get the fields (name id phone) from several museums" - 3.16 - OK
+DR-232: I check the query to "get the fields (latitude longitude) from several museums" - 3.16 - OK
+DR-233: I check the query to "get the fields (name id phone) from several nursery_schools" - 3.20 - OK
+DR-234: I check the query to "get the fields (latitude longitude) from several nursery_schools" - 3.20 - OK
+DR-235: I check the query to "get the fields (name id phone) from several schools" - 3.24 - OK
+DR-236: I check the query to "get the fields (latitude longitude) from several schools" - 3.24 - OK
+DR-237: I check the query to "get the fields (name id phone) from several security_forces" - 3.28 - OK
+DR-238: I check the query to "get the fields (latitude longitude) from several security_forces" - 3.28 - OK
+
+Feature: [data-radar] API queries (To a specific infrastructure)
+Use Cases: 3.1 - 3.5 - 3.9 - 3.13 - 3.17 - 3.21 - 3.25
+DR-1: I check the query to "get all information from a specific high_school" - 3.1 - OK
+DR-2: I check the query to "get all information from a specific library" - 3.5 - OK
+DR-3: I check the query to "get all information from a specific monument" - 3.9 - OK
+DR-4: I check the query to "get all information from a specific museum" - 3.13 - OK
+DR-5: I check the query to "get all information from a specific nursery_school" - 3.17 - OK
+DR-6: I check the query to "get all information from a specific school" - 3.21 - OK
+DR-7: I check the query to "get all information from a specific security_forces" - 3.25 - OK
+DR-8: I check the query to "get the information of a specific high_school that does not exist" - 3.1 - OK
+DR-9: I check the query to "get the information of a specific library that does not exist" - 3.5 - OK
+DR-10: I check the query to "get the information of a specific monument that does not exist" - 3.9 - OK
+DR-11: I check the query to "get the information of a specific museum that does not exist" - 3.13 - OK
+DR-12: I check the query to "get the information of a specific nursery_school that does not exist" - 3.17 - OK
+DR-13: I check the query to "get the information of a specific school that does not exist" - 3.21 - OK
+DR-14: I check the query to "get the information of a specific security_forces that does not exist" - 3.25 - OK
+DR-15: I check the query to "get the field (name) from a specific high_school" - 3.1 - OK
+DR-16: I check the query to "get the field (latitude) from a specific high_school" - 3.1 - OK
+DR-17: I check the query to "get the field (longitude) from a specific high_school" - 3.1 - OK
+DR-18: I check the query to "get the field (phone) from a specific high_school" - 3.1 - OK
+DR-19: I check the query to "get the field (id) from a specific high_school" - 3.1 - OK
+DR-20: I check the query to "get the field (name) from a specific library" - 3.5 - OK
+DR-21: I check the query to "get the field (latitude) from a specific library" - 3.5 - OK
+DR-22: I check the query to "get the field (longitude) from a specific library" - 3.5 - OK
+DR-23: I check the query to "get the field (phone) from a specific library" - 3.5 - OK
+DR-24: I check the query to "get the field (id) from a specific library" - 3.5 - OK
+DR-25: I check the query to "get the field (name) from a specific monument" - 3.9 - OK
+DR-26: I check the query to "get the field (latitude) from a specific monument" - 3.9 - OK
+DR-27: I check the query to "get the field (longitude) from a specific monument" - 3.9 - OK
+DR-28: I check the query to "get the field (phone) from a specific monument" - 3.9 - OK
+DR-29: I check the query to "get the field (id) from a specific monument" - 3.9 - OK
+DR-30: I check the query to "get the field (name) from a specific museum" - 3.13 - OK
+DR-31: I check the query to "get the field (latitude) from a specific museum" - 3.13 - OK
+DR-32: I check the query to "get the field (longitude) from a specific museum" - 3.13 - OK
+DR-33: I check the query to "get the field (phone) from a specific museum" - 3.13 - OK
+DR-34: I check the query to "get the field (id) from a specific museum" - 3.13 - OK
+DR-35: I check the query to "get the field (name) from a specific nursery_school" - 3.17 - OK
+DR-36: I check the query to "get the field (latitude) from a specific nursery_school" - 3.17 - OK
+DR-37: I check the query to "get the field (longitude) from a specific nursery_school" - 3.17 - OK
+DR-38: I check the query to "get the field (phone) from a specific nursery_school" - 3.17 - OK
+DR-39: I check the query to "get the field (id) from a specific nursery_school" - 3.17 - OK
+DR-40: I check the query to "get the field (name) from a specific school" - 3.21 - OK
+DR-41: I check the query to "get the field (latitude) from a specific school" - 3.21 - OK
+DR-42: I check the query to "get the field (longitude) from a specific school" - 3.21 - OK
+DR-43: I check the query to "get the field (phone) from a specific school" - 3.21 - OK
+DR-44: I check the query to "get the field (id) from a specific school" - 3.21 - OK
+DR-45: I check the query to "get the field (name) from a specific security_forces" - 3.25 - OK
+DR-46: I check the query to "get the field (latitude) from a specific security_forces" - 3.25 - OK
+DR-47: I check the query to "get the field (longitude) from a specific security_forces" - 3.25 - OK
+DR-48: I check the query to "get the field (phone) from a specific security_forces" - 3.25 - OK
+DR-49: I check the query to "get the field (id) from a specific security_forces" - 3.25 - OK
+DR-50: I check the query to "get the fields (name id phone) from a specific high_school" - 3.2 - OK
+DR-51: I check the query to "get the fields (latitude longitude) from a specific high_school" - 3.2 - OK
+DR-52: I check the query to "get the fields (name id phone) from a specific library" - 3.6 - OK
+DR-53: I check the query to "get the fields (latitude longitude) from a specific library" - 3.6 - OK
+DR-54: I check the query to "get the fields (name id phone) from a specific monument" - 3.10 - OK
+DR-55: I check the query to "get the fields (latitude longitude) from a specific monument" - 3.10 - OK
+DR-56: I check the query to "get the fields (name id phone) from a specific museum" - 3.14 - OK
+DR-57: I check the query to "get the fields (latitude longitude) from a specific museum" - 3.14 - OK
+DR-58: I check the query to "get the fields (name id phone) from a specific nursery_school" - 3.18 - OK
+DR-59: I check the query to "get the fields (latitude longitude) from a specific nursery_school" - 3.18 - OK
+DR-60: I check the query to "get the fields (name id phone) from a specific school" - 3.22 - OK
+DR-61: I check the query to "get the fields (latitude longitude) from a specific school" - 3.22 - OK
+DR-62: I check the query to "get the fields (name id phone) from a specific security_forces" - 3.26 - OK
+DR-63: I check the query to "get the fields (latitude longitude) from a specific security_forces" - 3.26 - OK
