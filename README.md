@@ -47,8 +47,12 @@ docker run --name data-radar-api -d -p 8000:8000 -v /local/directory/data/:/code
 #### Adquisición de datos
 
 Una vez debidamente levantada la API será necesario realizar la carga de datos sobre la base de datos MariaDB. Para
-ello basta con ejecutar el siguiente comando sobre el contenedor Docker de la API.
+ello basta con ejecutar los siguientes comandos sobre el contenedor Docker de la API.
 ```
+# Generación de tablas
+docker exec -i data-radar-api python manage.py migrate
+
+# Carga de datos
 docker exec -i data-radar-api python manage.py load_data
 ```
 
