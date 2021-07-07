@@ -42,6 +42,10 @@ docker run --name data-radar-api -d -p 8000:8000 --env-file .env totalspizt/data
 # el volumen /code/data/ a un directorio local en el que se encuentren los datos de los elementos a cargar
 
 docker run --name data-radar-api -d -p 8000:8000 -v /local/directory/data/:/code/data/ --env-file .env totalspizt/data-radar:VERSION
+
+# Apagado de la API
+docker stop data-radar-api
+docker rm data-radar-api
 ```
 
 #### Adquisición de datos
