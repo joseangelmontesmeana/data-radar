@@ -35,14 +35,23 @@ LOCAL_DATA=True                 # (Usar datos locales o extraerlos directamente 
 
 Una vez se disponga de docker y una base de datos accesible el despliegue del servicio se realiza lanzando la imagen docker.
 ```
-docker run -d -p 8000:8000 --env-file .env totalspizt/data-radar:VERSION
+docker run --name data-radar-api -d -p 8000:8000 --env-file .env totalspizt/data-radar:VERSION
 
 # Nota: 
 # En caso de activar LOCAL_DATA para permitir la carga de datos desde los ficheros locales, será necesario mapear
 # el volumen /code/data/ a un directorio local en el que se encuentren los datos de los elementos a cargar
 
-docker run -d -p 8000:8000 -v /local/directory/data/:/code/data/ --env-file .env totalspizt/data-radar:VERSION
+docker run --name data-radar-api -d -p 8000:8000 -v /local/directory/data/:/code/data/ --env-file .env totalspizt/data-radar:VERSION
 ```
+
+#### Adquisición de datos
+
+Una vez debidamente levantada la API será necesario realizar la carga de datos sobre la base de datos MariaDB. Para
+ello basta con ejecutar el siguiente comando sobre el contenedor Docker de la API.
+```
+docker exec -i data-radar-api python manage.py load_data
+```
+
 ## Entorno de desarrollo
 
 ### Prerrequisitos en desarrollo
@@ -97,6 +106,9 @@ make up
 
 # El servicio quedara expuesto en el puerto 8000 de nuestra máquina, y la base de datos en el 3306.
 
+# Carga de datos:
+make import_data
+
 # Para apagar el servicio, basta con ejecutar la siguiente orden:
 make clean
 
@@ -114,6 +126,9 @@ git pull git@github.com:joseangelmontesmeana/data-radar.git
 docker-compose up -d --build
 
 # El servicio quedara expuesto en el puerto 8000 de nuestra máquina, y la base de datos en el 3306.
+
+# Carga de datos:
+docker-compose exec api python manage.py load_data
 
 # Para apagar el servicio, basta con ejecutar la siguiente orden:
 docker-compose down
