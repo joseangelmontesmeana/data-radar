@@ -1,0 +1,1294 @@
+{
+	"info": {
+		"_postman_id": "1c49294f-669b-4f0c-8512-80ea81929a6a",
+		"name": "DataRadar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All_infrastructures_of_type",
+			"item": [
+				{
+					"name": "monuments_all",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getAllMonuments {name latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "high_schools_all",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getAllHighSchools {name phone latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "libraries_all",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getAllLibraries {name phone latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "museums_all",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getAllMuseums {name}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nursery_schools_all",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getAllNurserySchools {name phone}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "schools_all",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getAllSchools {name phone latitude longitude id}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "security_forces_all",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getAllSecurityForces {name phone latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Several_infrastructures_of_type",
+			"item": [
+				{
+					"name": "monuments_several",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getListMonuments(names: [\\\"Torre de la memoria\\\", \\\"Monumento a la República\\\"]) {name latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "high_schools_several",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getListHighSchools(names: [\\\"I.E.S. Emilio Alarcos\\\", \\\"I.E.S. Padre Feijoo\\\"]) {name latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "libraries_several",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getListLibraries (names: [\\\"Biblioteca La Arena\\\", \\\"Biblioteca Montiana\\\"]) {name phone}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "museums_several",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getListMuseums (names: [\\\"BIOPARC Acuario de Gijón\\\", \\\"Museo Termas Romanas de Campo Valdés\\\"]) {name latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nursery_schools_several",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getListNurserySchools(names: [\\\"Escuela de Educación Infantil Los Playinos\\\", \\\"Escuela de educación Infantil de Montevil\\\"]) {name latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "schools_several",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getListSchools(names: [\\\"Colegio Público Montiana\\\", \\\"Colegio Público Miguel de Cervantes\\\"]) {name phone latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "security_forces_several",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getListSecurityForces(names: [\\\"Guardia Civil\\\", \\\"Bomberos\\\"]) {name phone}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Specific_infrastructure",
+			"item": [
+				{
+					"name": "monuments_specific",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getMonument(name: \\\"Torre de la memoria\\\") {name latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "high_schools_specific",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getHighSchool(name: \\\"I.E.S. Emilio Alarcos\\\") {name latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "libraries_specific",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getLibrary (name: \\\"Biblioteca La Arena\\\") {name phone}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "museums_specific",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getMuseum (name: \\\"BIOPARC Acuario de Gijón\\\") {name latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nursery_schools_specific",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getNurserySchool(name: \\\"Escuela de Educación Infantil Los Playinos\\\") {name latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "schools_specific",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getSchool(name: \\\"Colegio Público Montiana\\\") {name phone latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "security_forces_specific",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getSecurityForces(name: \\\"Guardia Civil\\\") {name phone}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nearby_infrastructures_of_type",
+			"item": [
+				{
+					"name": "monuments_nearby",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getNearbyMonuments(latitude: 43.5453, longitude: -5.663616, radio: 200) {name latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "high_schools_nearby",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getNearbyHighSchools(latitude: 43.5453, longitude: -5.663616, radio: 1500) {name phone}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "libraries_nearby",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getNearbyLibraries (latitude: 43.5453, longitude: -5.663616, radio: 500) {name}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "museums_nearby",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getNearbyMuseums(latitude: 43.5453, longitude: -5.663616, radio: 500) {name latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nursery_schools_nearby",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getNearbyNurserySchools(latitude: 43.5453, longitude: -5.663616, radio: 500) {name phone latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "schools_nearby",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getNearbySchools(latitude: 43.5453, longitude: -5.663616, radio: 500) {name phone latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "security_forces_nearby",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getNearbySecurityForces(latitude: 43.5453, longitude: -5.663616, radio: 2000) {name latitude longitude}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Combined_queries",
+			"item": [
+				{
+					"name": "monuments_all_museums_all",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getAllMonuments {name latitude longitude} getAllMuseums {name phone}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "monuments_nearby_museums_all",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"query\":\"{getNearbyMonuments(latitude: 43.5453, longitude: -5.663616, radio: 200) {name latitude longitude} getAllMuseums {name phone}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-34-254-183-119.eu-west-1.compute.amazonaws.com:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"ec2-34-254-183-119",
+								"eu-west-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
